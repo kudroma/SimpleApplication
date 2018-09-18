@@ -19,7 +19,7 @@ namespace SimpleApplication
 		
 		void setY(float y) { m_y = y; }
 		
-		float distanceToPoint(float apx, float apy) const;
+		float distanceToPoint(const Point2d& otherPoint) const;
 		
 	private:
 		float m_x = 0.0f;

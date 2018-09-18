@@ -14,7 +14,7 @@ SimpleApplication::Point2d::~Point2d()
 {
 }
 
-float SimpleApplication::Point2d::distanceToPoint(float apx, float apy) const
+float SimpleApplication::Point2d::distanceToPoint(const Point2d& otherPoint) const
 {
-	return static_cast<float>( sqrt( (apx - m_x) * (apx - m_x) + (apy - m_y) * (apy - m_y) ) );
+	return static_cast<float>( sqrt( (otherPoint.x() - m_x) * (otherPoint.x() - m_x) + (otherPoint.y() - m_y) * (otherPoint.y() - m_y) ) );
 }
