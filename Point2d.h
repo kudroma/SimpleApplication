@@ -26,7 +26,7 @@ namespace SimpleApplication
         //! Sets \c y coordinate of the point.
 		void setY(float y) { m_y = y; }
 		
-        //! Returns distance to \c otherPoint.
+        //! Returns distance to \c other Point.
 		float distanceToPoint(const Point2d& otherPoint) const;
 		
 	private:
