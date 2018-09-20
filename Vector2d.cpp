@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Vector2d.h"
 
 SimpleApplication::Vector2d::Vector2d()
