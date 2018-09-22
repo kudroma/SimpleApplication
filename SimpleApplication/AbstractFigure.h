@@ -36,7 +36,7 @@ namespace SimpleApplication
 		virtual float area() = 0;
 
         //! Returns bounding rect of the figure.
-		virtual BoundingRect bRect() const = 0;
+		virtual BoundingRect boundingRect() const = 0;
 
 	private:
         //! Identifier of the figure.
