@@ -1,32 +1,33 @@
 #pragma once
 
+#include "BoundingRect.h"
+
 #include <iostream>
 
-
-class AbstractFigure
+namespace SimpleApplication
 {
-public:
-	AbstractFigure();
+	class AbstractFigure
+	{
+	public:
+		AbstractFigure();
 
-	AbstractFigure(int id);
+		AbstractFigure(int id);
 
-	~AbstractFigure();
+		~AbstractFigure();
 
-	virtual void print() const { std::cout << "object" << std::endl; }
+		virtual void print() const { std::cout << "object" << std::endl; }
 
-	int id() const { return m_id; }
+		int id() const { return m_id; }
 
-	void setId(int id) { m_id = id; }
+		void setId(int id) { m_id = id; }
 
-	virtual float perimeter() = 0; 
+		virtual float perimeter() = 0;
 
-	virtual float area() = 0; 
+		virtual float area() = 0;
 
-	virtual float areaBigRectangle() = 0;
+		virtual BoundingRect bRect() const = 0;
 
-private:
-	int m_id = 0;
-};
-
-
-
+	private:
+		int m_id = 0;
+	};
+}
