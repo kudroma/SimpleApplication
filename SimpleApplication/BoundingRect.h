@@ -34,16 +34,16 @@ namespace SimpleApplication
 		//! Sets height of the bouding rect.
 		void setHeight(float height) { m_height = height; }
 
-		//! X coordinate of the center of the bounding rect.
+		//!  Returns x coordinate of the center of the bounding rect.
 		float x() const { return m_x; }
 
-		//!  Set x coordinate of the center of the bounding rect.
+		//!  Sets x coordinate of the center of the bounding rect.
 		void setX(float x) { m_x = x; }
 
-		//! Y coordinate of the center of the bounding rect.
+		//!  Returns y coordinate of the center of the bounding rect.
 		float y() const { return m_y; }
 
-		//! Set y coordinate of the center of the bounding rect.
+		//! Sets y coordinate of the center of the bounding rect.
 		void setY(float y) { m_y = y; }
 
 	private:
