@@ -1,37 +1,32 @@
+#define _USE_MATH_DEFINES
+
 #include "stdafx.h"
 #include "BoundingRect.h"
-
 
 BoundingRect::BoundingRect()
 {
 }
-#include "Rectangle.h"
-#define _USE_MATH_DEFINES
-#include <math.h>
 
-
-
-Rectangle::Rectangle()
+BoundingRect::BoundingRect(int id, float x, float y, float l1, float l2) : AbstractFigure(id), m_x(x), m_y(y), m_l1(l1), m_l2(l2)
 {
 }
 
-Rectangle::Rectangle(int id, float w, float h): AbstractGeometryPrimitive(id), m_w(w), m_h(h)
+BoundingRect::~BoundingRect()
 {
 }
 
-Rectangle::~Rectangle()
+float BoundingRect::perimeter()
 {
-}
-
-float Rectangle::perimeter()
-{
-	return 2 * (m_w + m_h);
-}
-
-float Rectangle::area()
-{
-	return m_w * m_h;
+	return (m_l1 + m_l2) * 2;
 }
 
 
+float BoundingRect::area()
+{
+	return m_l1 * m_l2;
+}
 
+float BoundingRect::areaBigRectangle()
+{
+	return  m_l1 * m_l2;
+}

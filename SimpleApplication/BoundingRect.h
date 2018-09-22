@@ -1,48 +1,44 @@
 #pragma once
-class BoundingRect
-{
-public:
-	BoundingRect();
-	~BoundingRect();
-
-#pragma once
+#include <iostream>
 
 #include "AbstractFigure.h"
 
+class BoundingRect : public AbstractFigure
+{
+public:
+	BoundingRect();
 
-	class Rectangle : public AbstractGeometryPrimitive
-	{
-	public:
-		Rectangle();
-		Rectangle(int id, float w, float h);
-		~Rectangle();
+	BoundingRect(int id, float x, float y, float l1, float l2);
 
-		float x() const { return m_x; }
-		void setX(float x) { m_x = x; }
+	~BoundingRect();
 
-		float y() const { return m_y; }
-		void setY(float y) { m_y = y; }
+	float l1() const { return m_l1; }
+	void setL1(float l1) { m_l1 = l1; }
 
-		float w() const { return m_w; }
-		void setW(float w) { m_w = w; }
+	float l2() const { return m_l2; }
+	void setL2(float l2) { m_l2 = l2; }
 
-		float h() const { return m_h; }
-		void setH(float h) { m_h = h; }
+	float x() const { return m_x; }
+	void setX(float x) { m_x = x; }
 
-		float perimeter() override;
+	float y() const { return m_y; }
+	void setY(float y) { m_y = y; }
 
-		float area() override;
+	float perimeter() override;
 
-		void print() const override {
-			std::cout << "rectangle id = " << id() << " x: " << m_x << " y: " << m_y << " width: " << m_w << " height: " << m_h << std::endl;
-		}
-	private:
-		float m_x = 0.0f;
-		float m_y = 0.0f;
-		float m_w = 0.1f;
-		float m_h = 0.1f;
-	};
+	float area() override;
 
+	float areaBigRectangle() override;
 
+	void print() const override {
+		std::cout << "Bounding Rect id = " << id() << " | l1: " << m_l1 << " l2: " << m_l2
+			<< " x: " << m_x << " y: " << m_y << std::endl;
+	}
+
+private:
+	float m_l1 = 0.1f;
+	float m_l2 = 0.1f;
+	float m_x = 0.0f;
+	float m_y = 0.0f;
 };
 
