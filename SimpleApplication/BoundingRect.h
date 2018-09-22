@@ -9,15 +9,15 @@ namespace SimpleApplication
 	public:
 		BoundingRect();
 
-		BoundingRect(float x, float y, float l1, float l2);
+		BoundingRect(float x, float y, float width, float height);
 
 		~BoundingRect();
 
-		float l1() const { return m_width; }
-		void setL1(float l1) { m_width = l1; }
+		float width() const { return m_width; }
+		void setWidth(float width) { m_width = width; }
 
-		float l2() const { return m_l2; }
-		void setL2(float l2) { m_l2 = l2; }
+		float height() const { return m_height; }
+		void setHeight(float height) { m_height = height; }
 
 		float x() const { return m_x; }
 		void setX(float x) { m_x = x; }
@@ -27,7 +27,7 @@ namespace SimpleApplication
 
 	private:
 		float m_width = 0.1f;
-		float m_l2 = 0.1f;
+		float m_height = 0.1f;
 		float m_x = 0.0f;
 		float m_y = 0.0f;
 	};
