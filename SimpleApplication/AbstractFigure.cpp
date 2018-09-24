@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "AbstractFigure.h"
 
 using namespace SimpleApplication;
