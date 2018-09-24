@@ -147,10 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFigure.h" />
+    <ClInclude Include="BoundingRect.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractFigure.cpp" />
+    <ClCompile Include="BoundingRect.cpp" />
     <ClCompile Include="SimpleApplication.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
