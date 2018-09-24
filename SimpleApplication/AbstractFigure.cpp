@@ -13,7 +13,3 @@ AbstractFigure::AbstractFigure(int id) : m_id(id)
 AbstractFigure::~AbstractFigure()
 {
 }
-
-
-
-
