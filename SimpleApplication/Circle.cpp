@@ -1,39 +1,38 @@
 #include "Circle.h"
+#include "AbstractFigure.h"
 
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 
-Circle::Circle()
+SimpleApplication::Circle::Circle()
 {
 }
 
-Circle::Circle(int id, float r) : AbstractFigure(id), m_r(r)
+SimpleApplication::Circle::Circle(int id, float r) : AbstractFigure(id), m_r(r)
 {
 }
 
-
-Circle::~Circle()
+SimpleApplication::Circle::~Circle()
 {
 }
 
-float Circle::perimeter() const
-{
-	return 2 * m_r * M_PI;
-}
-
-float Circle::area() const 
+float const SimpleApplication::Circle::area()
 {
 	return m_r * m_r * M_PI;
 }
 
-float Circle::boundingRect() const 
+float const SimpleApplication::Circle::perimeter()
 {
-	return 0.0f;
+	return 2 * m_r * M_PI;
 }
-/* 
-float Circle::areaBigRectangle()
+
+
+SimpleApplication::BoundingRect SimpleApplication::Circle::boundingRect() const
 {
-	return 2 * m_r * m_r;
+	SimpleApplication::BoundingRect myObject;
+	myObject.setCenter(m_center);
+	myObject.setWidth(m_r*2);
+	myObject.setHeight(m_r*2);
+	return myObject;
 }
-*/ 

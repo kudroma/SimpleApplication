@@ -1,11 +1,13 @@
 #pragma once
 
 #include "BoundingRect.h"
+#include "Circle.h"
+#include "Ellipse.h"
 
 #include <iostream>
 
-namespace SimpleApplication
-{
+//namespace SimpleApplication
+//{
     //! Class represents any two-dimensional figure which can be drawn in the SimpleApplication.
     /*!
         In order to create concrete figure subclass this class.
@@ -30,10 +32,10 @@ namespace SimpleApplication
 		void setId(int id) { m_id = id; }
 
         //! Returns perimeter of the figure.
-		virtual float perimeter() = 0;
+		virtual float const perimeter() = 0;
 
         //! Returns area of the figure.
-		virtual float area() = 0;
+		virtual float const area() = 0;
 
         //! Returns bounding rect of the figure.
 		virtual BoundingRect boundingRect() const = 0;
@@ -42,4 +44,4 @@ namespace SimpleApplication
         //! Identifier of the figure.
 		int m_id = 0;
 	};
-}
+//}

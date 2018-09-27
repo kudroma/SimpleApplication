@@ -5,29 +5,33 @@
 
 
 
-RaoundedRectangle::RaoundedRectangle()
+SimpleApplication::RaoundedRectangle::RaoundedRectangle()
 {
 }
 
-RaoundedRectangle::RaoundedRectangle(int id, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r)
+SimpleApplication::RaoundedRectangle::RaoundedRectangle(int id, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r)
 {
 }
 
-RaoundedRectangle::~RaoundedRectangle()
+SimpleApplication::RaoundedRectangle::~RaoundedRectangle()
 {
 }
 
-float RaoundedRectangle::perimeter()
+float const SimpleApplication::RaoundedRectangle::perimeter()
 {
 	return 2 * (m_w + m_h);
 }
 
-float RaoundedRectangle::area()
+float const SimpleApplication::RaoundedRectangle::area()
 {
 	return m_w * m_h;
 }
 
-float RaoundedRectangle::areaBigRectangle()
+SimpleApplication::BoundingRect SimpleApplication::RaoundedRectangle::boundingRect() const
 {
-	return m_w * m_h;
+	SimpleApplication::BoundingRect myObject;
+	myObject.setCenter(m_center);
+	myObject.setWidth(m_w);
+	myObject.setHeight(m_h);
+	return myObject;
 }

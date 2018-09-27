@@ -1,45 +1,47 @@
 #pragma once
 
 #include "AbstractFigure.h"
+#include "Point2d.h"
 
-class Ellipse : public  SimpleApplication::AbstractFigure
+
+namespace SimpleApplication
 {
-public:
-	Ellipse();
+	class Ellipse : public  SimpleApplication::AbstractFigure
+	{
+	public:
+		Ellipse();
 
-	Ellipse(int id, float a, float b);
+		Ellipse(int id, float a, float b);
 
-	~Ellipse();
+		~Ellipse();
 
-	float a() const { return m_a; }
+		float a() const { return m_a; }
 
-	void setA(float a) { m_a = a; }
+		void setA(float a) { m_a = a; }
 
-	float b() const { return m_b; }
+		float b() const { return m_b; }
 
-	void setB(float b) { m_b = b; }
+		void setB(float b) { m_b = b; }
 
-	float x() const { return m_x; }
+		//!  Returns center  of the bounding rect.
+		Point2d center() const { return m_center; }
 
-	void setX(float x) { m_x = x; }
+		//! Sets center  of the bouding rect.
+		void setCenter(Point2d center) { m_center = center; }
 
-	float y() const { return m_y; }
+		virtual float  perimeter() const override;
 
-	void setY(float y) { m_y = y; }
+		virtual float  area() const override;
 
-	float perimeter() const override;
+		BoundingRect const boundingRect()  override;
 
-	float area() const override;
-
-	float boundingRect() const override;
-
-	void print() const  override {
-		std::cout << "Ellipse id = " << id() << " a: " << m_a << " b: " << m_b
-			<< " x: " << m_x << " y: " << m_y << std::endl;
-	}
-private:
-	float m_a = 1.0f;
-	float m_b = 1.0f;
-	float m_x = 0.0f;
-	float m_y = 0.0f;
-};
+		void print() const  override {
+			std::cout << "Ellipse  id= " << id() << " a: " << m_a << " b: " << m_b
+				<< " x: " << m_center.x << " y: " << m_center.y << std::endl;
+		}
+	private:
+		float m_a = 1.0f;
+		float m_b = 1.0f;
+		Point2d m_center;
+	};
+}

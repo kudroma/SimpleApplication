@@ -1,41 +1,42 @@
 #pragma once
 
 #include "AbstractFigure.h"
+#include "Point2d.h"
 
-// The Circle class inherits the properties of the AbstractFigure class.
-class Circle : public SimpleApplication::AbstractFigure 
+namespace SimpleApplication
 {
-public:
-	Circle();
+	// The Circle class inherits the properties of the AbstractFigure class.
+	class Circle// : public AbstractFigure
+	{
+	public:
+		Circle();
 
-	Circle(int id, float r);
+		Circle(int id, float r);
 
-	~Circle();
+		~Circle();
 
-	float r() const { return m_r; }
+		float r() const { return m_r; }
 
-	void setR(float r) { m_r = r; }
+		void setR(float r) { m_r = r; }
 
-	float x() const { return m_x; }
+		//!  Returns center  of the bounding rect.
+		Point2d center() const { return m_center; }
 
-	void setX(float x) { m_x = x; }
+		//! Sets center  of the bouding rect.
+		void setCenter(Point2d center) { m_center = center; }
 
-	float y() const { return m_y; }
+		virtual float  perimeter() const override;
 
-	void setY(float y) { m_y = y; }
+		virtual float const area()  override;
 
-	float perimeter() const override;
+		SimpleApplication::BoundingRect boundingRect() const override;
 
-	float area() const override;
-
-	float  boundingRect() const override;
-
-	void print() const  override {
-		std::cout << "circle id = " << id() << " r: " << m_r
-			<< " x: " << m_x << " y: " << m_y << std::endl;
-	}
-private:
-	float m_r = 1.0f;
-	float m_x = 0.0f;
-	float m_y = 0.0f;
-};
+		void print() const  override {
+			std::cout << "circle id = " << id() << " r: " << m_r
+				<< " x: " << m_center.x << " y: " << m_center.y << std::endl;
+		}
+	private:
+		float m_r = 1.0f;
+		Point2d m_center;
+	};
+}

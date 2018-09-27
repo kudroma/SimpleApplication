@@ -2,32 +2,39 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h> 
+#include <random>
 
 
-Ellipse::Ellipse()
+SimpleApplication::Ellipse::Ellipse()
 {
 }
 
-Ellipse::Ellipse(int id, float a, float b) : AbstractFigure(id), m_a(a), m_b(b)
+SimpleApplication::Ellipse::Ellipse(int id, float a, float b) : AbstractFigure(id), m_a(a), m_b(b)
 {
 }
 
 
-Ellipse::~Ellipse()
+SimpleApplication::Ellipse::~Ellipse()
 {
 }
 
-float Ellipse::perimeter() const 
+float SimpleApplication::Ellipse::perimeter() const
 {
 	return 4 * (M_PI*m_a*m_b + m_a - m_b) / (m_a + m_b);
 }
 
-float Ellipse::area() const 
+float SimpleApplication::Ellipse::area() const
 {
+
 	return m_a * m_b * M_PI;
 }
-
-float Ellipse::boundingRect()
+SimpleApplication::BoundingRect SimpleApplication::Ellipse::boundingRect() const
 {
-	return 4 * m_a * m_b;
+	SimpleApplication::BoundingRect myObject;
+	myObject.setCenter(m_center);
+	myObject.setWidth(m_a);
+	myObject.setHeight(m_b);
+	return myObject;
 }
+
+

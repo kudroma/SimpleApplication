@@ -1,44 +1,46 @@
 #pragma once
 
 #include "AbstractFigure.h"
+#include "Point2d.h"
 
-
-class  RaoundedRectangle : public SimpleApplication::AbstractFigure
+namespace SimpleApplication
 {
-public:
-	RaoundedRectangle();
-	RaoundedRectangle(int id, float w, float h, float r);
-	~RaoundedRectangle();
+	class  RaoundedRectangle : public SimpleApplication::AbstractFigure
+	{
+	public:
+		RaoundedRectangle();
+		RaoundedRectangle(int id, float w, float h, float r);
+		~RaoundedRectangle();
 
-	float x() const { return m_x; }
-	void setX(float x) { m_x = x; }
+		//!  Returns center  of the bounding rect.
+		Point2d center() const { return m_center; }
 
-	float y() const { return m_y; }
-	void setY(float y) { m_y = y; }
+		//! Sets center  of the bouding rect.
+		void setCenter(Point2d center) { m_center = center; }
 
-	float w() const { return m_w; }
-	void setW(float w) { m_w = w; }
+		float w() const { return m_w; }
+		void setW(float w) { m_w = w; }
 
-	float h() const { return m_h; }
-	void setH(float h) { m_h = h; }
+		float h() const { return m_h; }
+		void setH(float h) { m_h = h; }
 
-	float r() const { return m_r; }
-	void setR(float r) { m_r = r; }
+		float r() const { return m_r; }
+		void setR(float r) { m_r = r; }
 
-	float perimeter() override;
+		float const  perimeter() override;
 
-	float area() override;
+		float const area() override;
 
-	float boundingRect() override;
+		SimpleApplication::BoundingRect boundingRect() const override;
 
-	void print() const override {
-		std::cout << "roanded rectangle id = " << id() << " x: " << m_x << " y: " << m_y << " width: " << m_w << " height: " << m_h << " radius of angles: "<< m_r << std::endl;
-	}
-private:
-	float m_x = 0.0f;
-	float m_y = 0.0f;
-	float m_w = 0.1f;
-	float m_h = 0.1f;
-	float m_r = 0.1f;
-};
+		void print() const override {
+			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_w << " height: " << m_h << " radius of angles: " << m_r << std::endl;
+		}
+	private:
+		Point2d m_center;
+		float m_w = 0.1f;
+		float m_h = 0.1f;
+		float m_r = 0.1f;
+	};
+}
 
