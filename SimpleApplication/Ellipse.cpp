@@ -20,21 +20,21 @@ SimpleApplication::Ellipse::~Ellipse()
 
 float SimpleApplication::Ellipse::perimeter() const
 {
-	return 4 * (M_PI*m_a*m_b + m_a - m_b) / (m_a + m_b);
+	return 4 * (static_cast<float>(M_PI) * m_a * m_b + m_a - m_b) / (m_a + m_b);
 }
 
 float SimpleApplication::Ellipse::area() const
 {
 
-	return m_a * m_b * M_PI;
+	return m_a * m_b * static_cast<float>(M_PI);
 }
 SimpleApplication::BoundingRect SimpleApplication::Ellipse::boundingRect() const
 {
-	SimpleApplication::BoundingRect myObject;
-	myObject.setCenter(m_center);
-	myObject.setWidth(m_a);
-	myObject.setHeight(m_b);
-	return myObject;
+	SimpleApplication::BoundingRect bRect;
+	bRect.setCenter(m_center);
+	bRect.setWidth(m_a);
+	bRect.setHeight(m_b);
+	return bRect;
 }
 
 

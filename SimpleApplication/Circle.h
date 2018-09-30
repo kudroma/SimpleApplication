@@ -6,7 +6,7 @@
 namespace SimpleApplication
 {
 	// The Circle class inherits the properties of the AbstractFigure class.
-	class Circle// : public AbstractFigure
+	class Circle : public AbstractFigure
 	{
 	public:
 		Circle();
@@ -27,13 +27,13 @@ namespace SimpleApplication
 
 		virtual float  perimeter() const override;
 
-		virtual float const area()  override;
+		virtual float  area() const override;
 
 		SimpleApplication::BoundingRect boundingRect() const override;
 
 		void print() const  override {
 			std::cout << "circle id = " << id() << " r: " << m_r
-				<< " x: " << m_center.x << " y: " << m_center.y << std::endl;
+				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 	private:
 		float m_r = 1.0f;

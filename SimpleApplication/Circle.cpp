@@ -17,22 +17,22 @@ SimpleApplication::Circle::~Circle()
 {
 }
 
-float const SimpleApplication::Circle::area()
+float  SimpleApplication::Circle::area () const
 {
-	return m_r * m_r * M_PI;
+	return m_r * m_r * static_cast<float>(M_PI);
 }
 
-float const SimpleApplication::Circle::perimeter()
+float  SimpleApplication::Circle::perimeter() const
 {
-	return 2 * m_r * M_PI;
+	return 2 * m_r * static_cast<float>(M_PI);
 }
 
 
 SimpleApplication::BoundingRect SimpleApplication::Circle::boundingRect() const
 {
-	SimpleApplication::BoundingRect myObject;
-	myObject.setCenter(m_center);
-	myObject.setWidth(m_r*2);
-	myObject.setHeight(m_r*2);
-	return myObject;
+	SimpleApplication::BoundingRect bRect;
+	bRect.setCenter(m_center);
+	bRect.setWidth(m_r*2);
+	bRect.setHeight(m_r*2);
+	return bRect;
 }

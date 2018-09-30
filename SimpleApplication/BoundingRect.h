@@ -19,8 +19,8 @@ namespace SimpleApplication
 	public:
 		BoundingRect();
 
-		//! Constructs bounding rect from coordinates of center (\c x, \c y), \c width and \c height.
-		BoundingRect(float x, float y, float width, float height);
+		//! Constructs bounding rect from coordinates of center (m_center), \c width and \c height.
+		BoundingRect(float m_center, float width, float height);
 
 		~BoundingRect();
 

@@ -154,7 +154,7 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Ellipse.h" />
     <ClInclude Include="Point2d.h" />
-    <ClInclude Include="RaoundedRectangle.h" />
+    <ClInclude Include="RoundedRect.h" />
     <ClInclude Include="Vector2d.h" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +163,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Point2d.cpp" />
-    <ClCompile Include="RaoundedRectangle.cpp" />
+    <ClCompile Include="RoundedRect.cpp" />
     <ClCompile Include="SimpleApplication.cpp" />
     <ClCompile Include="Vector2d.cpp" />
   </ItemGroup>
