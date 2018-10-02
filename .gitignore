@@ -1,3 +1,5 @@
 Debug/
 .vs/
 *.orig
+*.pro.user
+build-*/
