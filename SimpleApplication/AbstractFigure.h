@@ -30,10 +30,10 @@ namespace SimpleApplication
 		void setId(int id) { m_id = id; }
 
         //! Returns perimeter of the figure.
-		virtual float perimeter() = 0;
+		virtual float perimeter() const = 0;
 
         //! Returns area of the figure.
-		virtual float area() = 0;
+		virtual float area() const = 0;
 
         //! Returns bounding rect of the figure.
 		virtual BoundingRect boundingRect() const = 0;

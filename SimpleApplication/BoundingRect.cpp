@@ -8,7 +8,7 @@ BoundingRect::BoundingRect()
 {
 }
 
-BoundingRect::BoundingRect(float x, float y, float width, float height) : m_x(x), m_y(y), m_width(width), m_height(height)
+BoundingRect::BoundingRect(float m_center, float width, float height) :  m_width(width), m_height(height)
 {
 }
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Point2d.h"
+
 #include <iostream>
 
 namespace SimpleApplication
@@ -17,8 +19,8 @@ namespace SimpleApplication
 	public:
 		BoundingRect();
 
-		//! Constructs bounding rect from coordinates of center (\c x, \c y), \c width and \c height.
-		BoundingRect(float x, float y, float width, float height);
+		//! Constructs bounding rect from coordinates of center (m_center), \c width and \c height.
+		BoundingRect(float m_center, float width, float height);
 
 		~BoundingRect();
 
@@ -34,17 +36,11 @@ namespace SimpleApplication
 		//! Sets height of the bouding rect.
 		void setHeight(float height) { m_height = height; }
 
-		//!  Returns x coordinate of the center of the bounding rect.
-		float x() const { return m_x; }
+		//!  Returns center  of the bounding rect.
+		Point2d center() const { return m_center; }
 
-		//!  Sets x coordinate of the center of the bounding rect.
-		void setX(float x) { m_x = x; }
-
-		//!  Returns y coordinate of the center of the bounding rect.
-		float y() const { return m_y; }
-
-		//! Sets y coordinate of the center of the bounding rect.
-		void setY(float y) { m_y = y; }
+		//! Sets center  of the bouding rect.
+		void setCenter(Point2d center) { m_center = center; }
 
 	private:
 		//! Width of the bounding rect.
@@ -53,11 +49,8 @@ namespace SimpleApplication
 		//! Height of the bounding rect.
 		float m_height = 0.1f;
 
-		//! X coordinate of the center of the bounding rect.
-		float m_x = 0.0f;
-
-		//! Y coordinate of the center of the bounding rect.
-		float m_y = 0.0f;
+		//! Center of the bounding rect.
+		Point2d m_center;
 	};
 }
 
