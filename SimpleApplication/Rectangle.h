@@ -1,0 +1,59 @@
+#pragma once
+#include "AbstractFigure.h"
+
+namespace SimpleApplication
+{
+	//! The class represents a rectangle in 2D space.
+	class Rectangle : public AbstractFigure
+	{
+	public:
+		//! The constructor creates a rectangle from identifier by the coordinates of the center, width and height.
+		Rectangle(int id, Point2d point, float width, float height);
+
+		~Rectangle();
+
+		//! Returns the width of a rectangle.
+		float width() const { return m_width; }
+
+		//! Sets the width of the rectangle.
+		void setWidth(float width) { m_width = width; }
+		
+		//! Returns the height of a rectangle.
+		float height() const { return m_height; }
+
+		//! Sets the height of the rectangle.
+		void setHeight(float height) { m_height = height; }
+		
+		//! Returns the coordinates of the center of the rectangle.
+		Point2d center() const { return m_center; }
+		
+		//! Sets the coordinates of the center of the rectangle.
+		void setCenter(const Point2d& center) { m_center = center; }
+		
+		//! The function of displaying the parameters of the rectangle.
+		void print() const
+		{
+			std::cout << "rectangle: id: " << id() << " width: " << m_width << " height: " << m_height;
+			std::cout << " center: x: " << m_center.x() << " y: " << m_center.y() << std::endl;
+		}
+
+		//! The function returns the perimeter of the rectangle.
+		float perimeter() const;
+
+		//! The function returns the area of the rectangle.
+		float area() const;
+
+		//! The function returns the bounding rectangle of the rectangle.
+		BoundingRect boundingRect() const;
+
+	private:
+		//! Rectangle width.
+		float m_width = 0.0f;
+
+		//! Rectangle height.
+		float m_height = 0.0f;
+		
+		//! Rectangle Center Coordinates.
+		Point2d m_center;
+	};
+}

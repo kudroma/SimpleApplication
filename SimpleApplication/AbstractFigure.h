@@ -1,8 +1,8 @@
 #pragma once
-
 #include "BoundingRect.h"
-
 #include <iostream>
+#include <vector>
+#include "Point2d.h"
 
 namespace SimpleApplication
 {
@@ -30,16 +30,26 @@ namespace SimpleApplication
 		void setId(int id) { m_id = id; }
 
         //! Returns perimeter of the figure.
-		virtual float perimeter() = 0;
+		virtual float perimeter() const = 0;
 
         //! Returns area of the figure.
-		virtual float area() = 0;
+		virtual float area() const = 0;
 
         //! Returns bounding rect of the figure.
 		virtual BoundingRect boundingRect() const = 0;
 
+		//! Returns the vector of vertex points of the figure.
+		std::vector<Point2d> points() const { return m_points; }
+
+		//! The function of finding the center of the bounding rectangle.
+		virtual Point2d CenterBoundingRectangle() const = 0;
+
 	private:
         //! Identifier of the figure.
 		int m_id = 0;
+	
+	protected:
+		//! Vector in which the vertices of the shape are stored.
+		std::vector<Point2d> m_points;
 	};
 }

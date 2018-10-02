@@ -152,13 +152,19 @@
     <ClInclude Include="AbstractFigure.h" />
     <ClInclude Include="BoundingRect.h" />
     <ClInclude Include="Point2d.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Trapeze.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vector2d.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AbstractFigure.cpp" />
     <ClCompile Include="BoundingRect.cpp" />
     <ClCompile Include="Point2d.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="SimpleApplication.cpp" />
+    <ClCompile Include="Trapeze.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vector2d.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
