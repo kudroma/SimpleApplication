@@ -27,7 +27,7 @@ namespace SimpleApplication
 		//!  Returns h  of the bounding rect.
 		float h() const { return m_h; }
 
-		//! Sets setH center  of the bouding rect.
+		//! Sets height  of the bouding rect.
 		void setH(float h) { m_h = h; }
 
 		//!  Returns r  of the bounding rect.
@@ -52,7 +52,7 @@ namespace SimpleApplication
 		//! M_w  of the center.
 		float m_w = 0.1f;
 
-		//! M_h  of the center.
+		//! M_h of the center.
 		float m_h = 0.1f;
 
 		//! M_r  of the center.
