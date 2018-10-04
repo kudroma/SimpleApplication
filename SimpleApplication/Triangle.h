@@ -1,4 +1,5 @@
 #pragma once
+
 #include "AbstractFigure.h"
 
 namespace SimpleApplication
@@ -13,22 +14,22 @@ namespace SimpleApplication
 		~Triangle();
 		
 		//! Returns vertex A of a triangle.
-		Point2d a() const { return m_a; }
+		Point2d a() const { return m_points[0]; }
 
 		//! Sets vertex A of a triangle.
-		void setA(const Point2d& a) { m_a = a; }
+		void setA(const Point2d& a) { m_points[0] = a; }
 		
 		//! Returns vertex B of a triangle.
-		Point2d b() const { return m_b; }
+		Point2d b() const { return m_points[1]; }
 
 		//! Sets vertex B of a triangle.
-		void setB(const Point2d& b) { m_b = b; }
+		void setB(const Point2d& b) { m_points[1] = b; }
 		
 		//! Returns vertex C of a triangle.
-		Point2d c() const { return m_c; }
+		Point2d c() const { return m_points[2]; }
 		
 		//! Sets vertex C of a triangle.
-		void setC(const Point2d& c) { m_c = c; }
+		void setC(const Point2d& c) { m_points[2] = c; }
 
 		//! Returns the length of the side AB of the triangle.
 		float abSide() const;
@@ -39,32 +40,25 @@ namespace SimpleApplication
 		//! Returns the length of the side CA of the triangle.
 		float caSide() const;
 
-		//! The function of displaying the parameters of the triangle.
+		//! Displays triangle parameters.
 		void print() const
 		{
 			std::cout << "triangle: id: " << id();
-			std::cout << " a: x: " << m_a.x() << " y: " << m_a.y();
-			std::cout << " b: x: " << m_b.x() << " y: " << m_b.y();
-			std::cout << " c: x: " << m_c.x() << " y: " << m_c.y() << std::endl;
+			std::cout << " a: x: " << m_points[0].x() << " y: " << m_points[0].y();
+			std::cout << " b: x: " << m_points[1].x() << " y: " << m_points[1].y();
+			std::cout << " c: x: " << m_points[2].x() << " y: " << m_points[2].y() << std::endl;
 		}
 
-		//! The function returns the perimeter of the triangle.
+		//! Returns the perimeter of the triangle.
 		float perimeter() const;
 
-		//! The function returns the area of a triangle.
+		//! Returns the area of a triangle.
 		float area() const;
 
-		//! The function returns the bounding rectangle of the triangle.
+		//! Returns the bounding rectangle of the triangle.
 		BoundingRect boundingRect() const;
 
 	private:
-		//! Vertex A of a triangle.
-		Point2d m_a;
-
-		//! Vertex B of a triangle.
-		Point2d m_b;
-
-		//! Vertex C of a triangle.
-		Point2d m_c;
+		
 	};
 }

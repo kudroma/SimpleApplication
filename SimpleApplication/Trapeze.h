@@ -1,4 +1,5 @@
 #pragma once
+
 #include "AbstractFigure.h"
 
 namespace SimpleApplication
@@ -13,28 +14,28 @@ namespace SimpleApplication
 		~Trapeze();
 
 		//! Returns vertex A of a trapeze.
-		Point2d a() const { return m_a; }
+		Point2d a() const { return m_points[0]; }
 
 		//! Sets vertex A of a trapeze.
-		void setA(const Point2d& a) { m_a = a; }
+		void setA(const Point2d& a) { m_points[0] = a; }
 
 		//! Returns vertex B of a trapeze.
-		Point2d b() const { return m_b; }
+		Point2d b() const { return m_points[1]; }
 
 		//! Sets vertex B of a trapeze.
-		void setB(const Point2d& b) { m_b = b; }
+		void setB(const Point2d& b) { m_points[1] = b; }
 
 		//! Returns vertex C of a trapeze.
-		Point2d c() const { return m_c; }
+		Point2d c() const { return m_points[2]; }
 
 		//! Sets vertex C of a trapeze.
-		void setC(const Point2d& c) { m_c = c; }
+		void setC(const Point2d& c) { m_points[2] = c; }
 		
 		//! Returns vertex D of a trapeze.
-		Point2d d() const { return m_d; }
+		Point2d d() const { return m_points[3]; }
 
 		//! Sets vertex D of a trapeze.
-		void setD(const Point2d& d) { m_d = d; }
+		void setD(const Point2d& d) { m_points[3] = d; }
 
 		//! Returns the length of the side AB of the trapeze.
 		float abSide() const;
@@ -48,36 +49,26 @@ namespace SimpleApplication
 		//! Returns the length of the side DA of the trapeze.
 		float daSide() const;
 
-		//! The function of displaying the parameters of the trapeze.
+		//! Displays trapeze parameters.
 		void print() const
 		{
 			std::cout << "trapeze: id: " << id();
-			std::cout << " a: x: " << m_a.x() << " y: " << m_a.y();
-			std::cout << " b: x: " << m_b.x() << " y: " << m_b.y();
-			std::cout << " c: x: " << m_c.x() << " y: " << m_c.y();
-			std::cout << " d: x: " << m_d.x() << " y: " << m_d.y() << std::endl;
+			std::cout << " a: x: " << m_points[0].x() << " y: " << m_points[0].y();
+			std::cout << " b: x: " << m_points[1].x() << " y: " << m_points[1].y();
+			std::cout << " c: x: " << m_points[2].x() << " y: " << m_points[2].y();
+			std::cout << " d: x: " << m_points[3].x() << " y: " << m_points[3].y() << std::endl;
 		}
 
-		//! The function returns the perimeter of the trapeze.
+		//! Returns the perimeter of the trapeze.
 		float perimeter() const;
 
-		//! The function returns the area of the trapeze.
+		//! Returns the area of the trapeze.
 		float area() const;
 
-		//! The function returns the bounding rectangle of the trapeze.
+		//! Returns the bounding rectangle of the trapeze.
 		BoundingRect boundingRect() const;
 
 	private:
-		//! Vertex A of a trapeze.
-		Point2d m_a;
 		
-		//! Vertex B of a trapeze.
-		Point2d m_b;
-		
-		//! Vertex C of a trapeze.
-		Point2d m_c;
-
-		//! Vertex D of a trapeze.
-		Point2d m_d;
 	};
 }

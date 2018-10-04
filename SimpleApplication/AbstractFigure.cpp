@@ -1,5 +1,6 @@
 #include "AbstractFigure.h"
 #include <algorithm>
+
 using namespace SimpleApplication;
 
 AbstractFigure::AbstractFigure()

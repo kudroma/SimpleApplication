@@ -1,4 +1,5 @@
 #pragma once
+
 #include "BoundingRect.h"
 #include <iostream>
 #include <vector>
@@ -41,7 +42,7 @@ namespace SimpleApplication
 		//! Returns the vector of vertex points of the figure.
 		std::vector<Point2d> points() const { return m_points; }
 
-		//! The function of finding the center of the bounding rectangle.
+		//! Returns the coordinates of the center of the bounding box.
 		virtual Point2d CenterBoundingRectangle() const = 0;
 
 	private:
