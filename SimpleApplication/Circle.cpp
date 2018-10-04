@@ -7,14 +7,17 @@
 
 SimpleApplication::Circle::Circle()
 {
+
 }
 
 SimpleApplication::Circle::Circle(int id, float r) : AbstractFigure(id), m_r(r)
 {
+
 }
 
 SimpleApplication::Circle::~Circle()
 {
+
 }
 
 float  SimpleApplication::Circle::area () const
