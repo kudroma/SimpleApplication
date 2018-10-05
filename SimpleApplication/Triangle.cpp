@@ -43,5 +43,5 @@ float Triangle::area() const
 
 BoundingRect Triangle::boundingRect() const
 {
-	return BoundingRect(CenterBoundingRectangle().x(), CenterBoundingRectangle().y(), abSide(), 2 * area() / abSide());
+	return BoundingRect(CenterBoundingRectangle(), abSide(), 2 * area() / abSide());
 }

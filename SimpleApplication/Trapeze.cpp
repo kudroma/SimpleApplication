@@ -53,5 +53,5 @@ BoundingRect Trapeze::boundingRect() const
 	const float p = ((abSide() - cdSide()) * (abSide() - cdSide()) + bcSide() * bcSide() - daSide() * daSide())
 		/ (2 * (abSide() - cdSide()));
 	const float h = std::sqrtf(bcSide() * bcSide() - p * p);
-	return BoundingRect(CenterBoundingRectangle().x(), CenterBoundingRectangle().y(), abSide(), h);
+	return BoundingRect(CenterBoundingRectangle(), abSide(), h);
 }
