@@ -15,7 +15,7 @@ AbstractFigure::~AbstractFigure()
 {
 }
 
-Point2d AbstractFigure::CenterBoundingRectangle() const
+BoundingRect AbstractFigure::boudingBox() const
 {
 	auto points = m_points;
 	std::sort(points.begin(), points.end(), [](const Point2d& p1, const Point2d& p2)
@@ -32,6 +32,6 @@ Point2d AbstractFigure::CenterBoundingRectangle() const
 	});
 	auto yMin = points.front().y();
 	auto yMax = points.back().y();
-	
-	return Point2d((xMax - xMin) / 2 + xMin, (yMax - yMin) / 2 + yMin);
+
+	return BoundingRect(Point2d((xMax - xMin) / 2 + xMin, (yMax - yMin) / 2 + yMin), xMax - xMin, yMax - yMin);
 }

@@ -43,10 +43,7 @@ namespace SimpleApplication
 
 		//! Returns the area of a rectangle.
 		float area() const;
-
-		//! Returns the bounding rectangle of the rectangle.
-		BoundingRect boundingRect() const;
-
+				
 	private:
 		//! Rectangle width.
 		float m_width = 0.0f;

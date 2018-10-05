@@ -55,9 +55,6 @@ namespace SimpleApplication
 		//! Returns the area of a triangle.
 		float area() const;
 
-		//! Returns the bounding rectangle of the triangle.
-		BoundingRect boundingRect() const;
-
 	private:
 		
 	};

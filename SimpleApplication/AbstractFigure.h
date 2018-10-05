@@ -36,14 +36,11 @@ namespace SimpleApplication
         //! Returns area of the figure.
 		virtual float area() const = 0;
 
-        //! Returns bounding rect of the figure.
-		virtual BoundingRect boundingRect() const = 0;
+		//! Returns bounding rect of the figure.
+		virtual BoundingRect boudingBox() const;
 
-		//! Returns the vector of vertex points of the figure.
+        //! Returns the vector of vertex points of the figure.
 		std::vector<Point2d> points() const { return m_points; }
-
-		//! Returns the coordinates of the center of the bounding box.
-		virtual Point2d CenterBoundingRectangle() const = 0;
 
 	private:
         //! Identifier of the figure.

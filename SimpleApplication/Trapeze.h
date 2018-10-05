@@ -64,10 +64,7 @@ namespace SimpleApplication
 
 		//! Returns the area of the trapeze.
 		float area() const;
-
-		//! Returns the bounding rectangle of the trapeze.
-		BoundingRect boundingRect() const;
-
+		
 	private:
 		
 	};
