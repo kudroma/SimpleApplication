@@ -6,12 +6,12 @@
 
 namespace SimpleApplication
 {
-	class Ellipse : public  SimpleApplication::AbstractFigure
+	class Ellipse : public  AbstractFigure
 	{
 	public:
 		Ellipse();
 
-		Ellipse(int id, float a, float b);
+		Ellipse(int id, const Point2d& center, float a, float b);
 
 		~Ellipse();
 

@@ -5,11 +5,11 @@
 
 namespace SimpleApplication
 {
-	class  RoundedRect : public SimpleApplication::AbstractFigure
+	class  RoundedRect : public AbstractFigure
 	{
 	public:
 		RoundedRect();
-		RoundedRect(int id, float w, float h, float r);
+		RoundedRect(int id, const Point2d& center, float w, float h, float r);
 		~RoundedRect();
 
 		//!  Returns center  of the bounding rect.

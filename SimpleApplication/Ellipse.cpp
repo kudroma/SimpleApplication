@@ -9,7 +9,7 @@ SimpleApplication::Ellipse::Ellipse()
 {
 }
 
-SimpleApplication::Ellipse::Ellipse(int id, float a, float b) : AbstractFigure(id), m_a(a), m_b(b)
+SimpleApplication::Ellipse::Ellipse(int id, const Point2d& center, float a, float b) : AbstractFigure(id), m_a(a), m_b(b), m_center(center)
 {
 }
 
