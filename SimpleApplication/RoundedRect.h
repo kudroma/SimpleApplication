@@ -12,29 +12,29 @@ namespace SimpleApplication
 		RoundedRect(int id, const Point2d& center, float w, float h, float r);
 		~RoundedRect();
 
-		//!  Returns center  of the bounding rect.
+		//!  Returns center  of the rounded rect.
 		Point2d center() const { return m_center; }
 
-		//! Sets setcenter  of the bouding rect.
+		//! Sets setcenter  of the rounded rect.
 		void setCenter(Point2d center) { m_center = center; }
 
-		//!  Returns w  of the bounding rect.
-		float w() const { return m_w; }
+		//!  Returns width  of the rounded rect.
+		float width() const { return m_width; }
 
-		//!  Sets center  of the bounding rect.
-		void setW(float w) { m_w = w; }
+		//!  Sets width  of the rounded rect.
+		void setWidth(float w) { m_width = w; }
 
-		//!  Returns h  of the bounding rect.
-		float h() const { return m_h; }
+		//!  Returns height  of the rounded rect.
+		float height() const { return m_height; }
 
-		//! Sets height  of the bouding rect.
-		void setH(float h) { m_h = h; }
+		//! Sets height  of the rounded rect.
+		void setHeight(float h) { m_height = h; }
 
-		//!  Returns r  of the bounding rect.
-		float r() const { return m_r; }
+		//!  Returns radius  of the rounded rect.
+		float radius() const { return m_radius; }
 
-		//! Sets setR center  of the bouding rect.
-		void setR(float r) { m_r = r; }
+		//! Sets radius  of the rounded rect.
+		void setRadius(float r) { m_radius = r; }
 
 		float perimeter() const override;
 
@@ -43,20 +43,20 @@ namespace SimpleApplication
 		SimpleApplication::BoundingRect boundingRect() const override;
 
 		void print() const override {
-			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_w << " height: " << m_h << " radius of angles: " << m_r << std::endl;
+			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_width << " height: " << m_height << " radius of angles: " << m_radius << std::endl;
 		}
 	private:
-		//! Point2d  m_center of the center.
+		//!  Center  of the rounded rect.
 		Point2d m_center;
 
-		//! M_w  of the center.
-		float m_w = 0.1f;
+		//! Width of the rounded rect.
+		float m_width = 0.1f;
 
-		//! M_h of the center.
-		float m_h = 0.1f;
+		//! Height of the rounded rect.
+		float m_height = 0.1f;
 
-		//! M_r  of the center.
-		float m_r = 0.1f;
+		//! Radius  of the rounded rect.
+		float m_radius = 0.1f;
 	};
 }
 

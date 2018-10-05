@@ -15,14 +15,16 @@ namespace SimpleApplication
 
 		~Circle();
 
-		float r() const { return m_r; }
+		//! Returns radius of the circle.
+		float radius() const { return m_radius; }
 
-		void setR(float r) { m_r = r; }
+		//! Sets radius of the circle.
+		void setRadius(float r) { m_radius = r; }
 
-		//!  Returns center  of the bounding rect.
+		//!  Returns center  of the circle.
 		Point2d center() const { return m_center; }
 
-		//! Sets center  of the bouding rect.
+		//! Sets center  of the circle.
 		void setCenter(const Point2d& center) { m_center = center; }
 
 		virtual float  perimeter() const override;
@@ -32,11 +34,15 @@ namespace SimpleApplication
 		SimpleApplication::BoundingRect boundingRect() const override;
 
 		void print() const  override {
-			std::cout << "circle id = " << id() << " r: " << m_r
+			std::cout << "circle id = " << id() << " r: " << m_radius
 				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 	private:
-		float m_r = 1.0f;
+
+		//! The radius of the circle.
+		float m_radius = 1.0f;
+
+		//!  Center  of the circle.
 		Point2d m_center;
 	};
 }

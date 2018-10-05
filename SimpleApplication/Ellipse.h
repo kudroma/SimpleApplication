@@ -15,22 +15,22 @@ namespace SimpleApplication
 
 		~Ellipse();
 
-		//! Returns a of the bounding rect.
+		//! Returns a of the ellipse.
 		float a() const { return m_a; }
 
-		//! Sets setA of the bounding rect.
+		//! Sets setA of the ellipse.
 		void setA(float a) { m_a = a; }
 
-		//! Returns b of the bounding rect.
+		//! Returns b of the ellipse.
 		float b() const { return m_b; }
 
-		//! Sets setB of the bounding rect.
+		//! Sets setB of the ellipse.
 		void setB(float b) { m_b = b; }
 
-		//!  Returns Point2d center  of the bounding rect.
+		//!  Returns the center of the ellipse
 		Point2d center() const { return m_center; }
 
-		//! Sets center  of the bouding rect.
+		//! Sets center  of the ellipse.
 		void setCenter(Point2d center) { m_center = center; }
 
 		virtual float  perimeter() const override;
@@ -44,13 +44,13 @@ namespace SimpleApplication
 				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 	private:
-		//!  Returns  m_a center  of the bounding rect.
+		//!  Semiaxis of the ellipse.
 		float m_a = 1.0f;
 
-		//!  Returns  m_b center  of the bounding rect.
+		//!  The second semiaxis of the ellipse.
 		float m_b = 1.0f;
 
-		//!  Center  of the bounding rect.
+		//!  Center  of the ellipse.
 		Point2d m_center;
 	};
 }

@@ -9,7 +9,7 @@ SimpleApplication::RoundedRect::RoundedRect()
 {
 }
 
-SimpleApplication::RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r), m_center(center)
+SimpleApplication::RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) : AbstractFigure(id), m_width(w), m_height(h), m_radius(r), m_center(center)
 {
 }
 
@@ -19,19 +19,19 @@ SimpleApplication::RoundedRect::~RoundedRect()
 
 float  SimpleApplication::RoundedRect::perimeter() const
 {
-	return 2 * (m_w + m_h);
+	return 2 * (m_width + m_height);
 }
 
 float SimpleApplication::RoundedRect::area() const
 {
-	return m_w * m_h;
+	return m_width * m_height;
 }
 
 SimpleApplication::BoundingRect SimpleApplication::RoundedRect::boundingRect() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);
-	bRect.setWidth(m_w);
-	bRect.setHeight(m_h);
+	bRect.setWidth(m_width);
+	bRect.setHeight(m_height);
 	return bRect;
 }
