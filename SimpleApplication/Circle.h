@@ -11,7 +11,7 @@ namespace SimpleApplication
 	public:
 		Circle();
 
-		Circle(int id, float r);
+		Circle(int id, const Point2d& center, float r);
 
 		~Circle();
 
@@ -23,7 +23,7 @@ namespace SimpleApplication
 		Point2d center() const { return m_center; }
 
 		//! Sets center  of the bouding rect.
-		void setCenter(Point2d center) { m_center = center; }
+		void setCenter(const Point2d& center) { m_center = center; }
 
 		virtual float  perimeter() const override;
 

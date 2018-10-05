@@ -8,7 +8,7 @@ BoundingRect::BoundingRect()
 {
 }
 
-BoundingRect::BoundingRect(float m_center, float width, float height) :  m_width(width), m_height(height)
+BoundingRect::BoundingRect(const Point2d& center, float width, float height) :  m_width(width), m_height(height), m_center(center)
 {
 }
 
@@ -16,3 +16,4 @@ BoundingRect::~BoundingRect()
 {
 }
 
+  

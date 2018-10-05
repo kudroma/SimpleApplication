@@ -9,7 +9,7 @@ SimpleApplication::Circle::Circle()
 {
 }
 
-SimpleApplication::Circle::Circle(int id, float r) : AbstractFigure(id), m_r(r)
+SimpleApplication::Circle::Circle(int id, const Point2d& center, float r) : AbstractFigure(id), m_r(r), m_center(center)
 {
 }
 
