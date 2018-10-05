@@ -9,7 +9,7 @@ SimpleApplication::RoundedRect::RoundedRect()
 {
 }
 
-SimpleApplication::RoundedRect::RoundedRect(int id, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r)
+SimpleApplication::RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r), m_center(center)
 {
 }
 

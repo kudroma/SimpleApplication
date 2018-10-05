@@ -19,7 +19,7 @@ namespace SimpleApplication
 		BoundingRect();
 
 		//! Constructs bounding rect from coordinates of center (m_center), \c width and \c height.
-		BoundingRect(float m_center, float width, float height);
+		BoundingRect(const Point2d& center, float width, float height);
 
 		~BoundingRect();
 
