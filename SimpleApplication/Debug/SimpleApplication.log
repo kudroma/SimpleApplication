@@ -1,18 +1,5 @@
-﻿  AbstractFigure.cpp
-  BoundingRect.cpp
-  Circle.cpp
-  Ellipse.cpp
-  Point2d.cpp
-  Rectangle.cpp
-d:\tmp\simpleapplication\simpleapplication\simpleapplication\rectangle.cpp(30): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'SimpleApplication::BoundingRect'
-  d:\tmp\simpleapplication\simpleapplication\simpleapplication\rectangle.cpp(30): note: No constructor could take the source type, or constructor overload resolution was ambiguous
-  RoundedRect.cpp
-  SimpleApplication.cpp
+﻿  Rectangle.cpp
   Trapeze.cpp
-d:\tmp\simpleapplication\simpleapplication\simpleapplication\trapeze.cpp(56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'SimpleApplication::BoundingRect'
-  d:\tmp\simpleapplication\simpleapplication\simpleapplication\trapeze.cpp(56): note: No constructor could take the source type, or constructor overload resolution was ambiguous
   Triangle.cpp
-d:\tmp\simpleapplication\simpleapplication\simpleapplication\triangle.cpp(46): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'SimpleApplication::BoundingRect'
-  d:\tmp\simpleapplication\simpleapplication\simpleapplication\triangle.cpp(46): note: No constructor could take the source type, or constructor overload resolution was ambiguous
-  Vector2d.cpp
   Generating Code...
+  SimpleApplication.vcxproj -> D:\tmp\SimpleApplication\SimpleApplication\Debug\SimpleApplication.exe
