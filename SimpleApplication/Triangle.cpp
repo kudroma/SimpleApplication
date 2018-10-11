@@ -1,8 +1,9 @@
 #include "Triangle.h"
+
 using namespace SimpleApplication;
 
 Triangle::Triangle(int id, Point2d a, Point2d b, Point2d c)
-	: AbstractFigure(id), m_a(a), m_b(b), m_c(c)
+	: AbstractFigure(id)
 {
 	m_points.reserve(3);
 	m_points.push_back(a);
@@ -16,17 +17,17 @@ Triangle::~Triangle()
 
 float Triangle::abSide() const
 {
-	return m_a.Point2d::distanceToPoint(m_b);
+	return m_points[0].Point2d::distanceToPoint(m_points[1]);
 }
 
 float Triangle::bcSide() const
 {
-	return m_b.Point2d::distanceToPoint(m_c);
+	return m_points[1].Point2d::distanceToPoint(m_points[2]);
 }
 
 float Triangle::caSide() const
 {
-	return m_c.Point2d::distanceToPoint(m_a);
+	return m_points[2].Point2d::distanceToPoint(m_points[0]);
 }
 
 float Triangle::perimeter() const
@@ -39,9 +40,4 @@ float Triangle::area() const
 	const float p = (abSide() + bcSide() + caSide()) / 2.0f;
 	const float par = p * (p - abSide()) * (p - bcSide()) * (p - caSide());
 	if (par > 0) return std::sqrtf(par); else return 0;
-}
-
-BoundingRect Triangle::boundingRect() const
-{
-	return BoundingRect(CenterBoundingRectangle(), abSide(), 2 * area() / abSide());
 }

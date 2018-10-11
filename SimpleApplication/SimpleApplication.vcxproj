@@ -153,6 +153,7 @@
     <ClInclude Include="BoundingRect.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="FigureFactory.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Trapeze.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="BoundingRect.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="FigureFactory.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RoundedRect.cpp" />

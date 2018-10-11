@@ -1,4 +1,5 @@
 #pragma once
+
 #include "AbstractFigure.h"
 
 namespace SimpleApplication
@@ -30,22 +31,19 @@ namespace SimpleApplication
 		//! Sets the coordinates of the center of the rectangle.
 		void setCenter(const Point2d& center) { m_center = center; }
 		
-		//! The function of displaying the parameters of the rectangle.
+		//! Displays rectangle parameters.
 		void print() const
 		{
 			std::cout << "rectangle: id: " << id() << " width: " << m_width << " height: " << m_height;
 			std::cout << " center: x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 
-		//! The function returns the perimeter of the rectangle.
+		//! Returns the perimeter of the rectangle.
 		float perimeter() const;
 
-		//! The function returns the area of the rectangle.
+		//! Returns the area of a rectangle.
 		float area() const;
-
-		//! The function returns the bounding rectangle of the rectangle.
-		BoundingRect boundingRect() const;
-
+				
 	private:
 		//! Rectangle width.
 		float m_width = 0.0f;

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Point2d.h"
-
 #include <iostream>
 
 namespace SimpleApplication
