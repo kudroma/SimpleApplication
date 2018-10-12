@@ -37,7 +37,7 @@ namespace SimpleApplication
 
 		virtual float  area() const override;
 
-		BoundingRect boundingRect() const  override;
+		BoundingRect boudingBox() const  override;
 
 		void print() const  override {
 			std::cout << "Ellipse  id= " << id() << " a: " << m_a << " b: " << m_b

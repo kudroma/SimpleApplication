@@ -27,7 +27,7 @@ float SimpleApplication::RoundedRect::area() const
 	return m_w * m_h;
 }
 
-SimpleApplication::BoundingRect SimpleApplication::RoundedRect::boundingRect() const
+SimpleApplication::BoundingRect SimpleApplication::RoundedRect::boudingBox() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);

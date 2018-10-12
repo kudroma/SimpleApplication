@@ -29,7 +29,7 @@ namespace SimpleApplication
 
 		virtual float  area() const override;
 
-		SimpleApplication::BoundingRect boundingRect() const override;
+		BoundingRect boudingBox() const override;
 
 		void print() const  override {
 			std::cout << "circle id = " << id() << " r: " << m_r

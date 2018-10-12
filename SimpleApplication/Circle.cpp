@@ -31,7 +31,7 @@ float  SimpleApplication::Circle::perimeter() const
 }
 
 
-SimpleApplication::BoundingRect SimpleApplication::Circle::boundingRect() const
+SimpleApplication::BoundingRect SimpleApplication::Circle::boudingBox() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);

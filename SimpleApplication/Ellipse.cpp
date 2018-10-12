@@ -28,7 +28,7 @@ float SimpleApplication::Ellipse::area() const
 
 	return m_a * m_b * static_cast<float>(M_PI);
 }
-SimpleApplication::BoundingRect SimpleApplication::Ellipse::boundingRect() const
+SimpleApplication::BoundingRect SimpleApplication::Ellipse::boudingBox() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);
