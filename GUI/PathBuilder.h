@@ -23,13 +23,13 @@ namespace GUI
 		void setFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure) { m_figure = figure; }
 
 		//! Construction of a polyline by the points of the figure.
-		QPainterPath* drawsLines() const;
+		QPainterPath* drawLines() const;
 
 	private:
+		//! Converts Point2d to QPointF.
+		QPointF convert(SimpleApplication::Point2d point2d) const;
+
 		//! The object in which the vector of points is stored.
 		std::shared_ptr<SimpleApplication::AbstractFigure> m_figure;
-
-		//! Converts Point2d to QPointF.
-		QPointF converter(SimpleApplication::Point2d point2d) const;
 	};
 }
