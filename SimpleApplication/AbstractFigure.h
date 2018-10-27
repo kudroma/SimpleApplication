@@ -39,6 +39,9 @@ namespace SimpleApplication
 		//! Returns bounding rect of the figure.
 		virtual BoundingRect boudingBox() const;
 
+		//! Returns whether a point is inside a figure.
+		virtual bool pointInside(const Point2d& point) const;
+		
         //! Returns the vector of vertex points of the figure.
 		std::vector<Point2d> points() const { return m_points; }
 

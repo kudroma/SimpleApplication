@@ -39,3 +39,9 @@ SimpleApplication::BoundingRect SimpleApplication::Circle::boudingBox() const
 	bRect.setHeight(m_r*2);
 	return bRect;
 }
+
+bool SimpleApplication::Circle::pointInside(const Point2d& point) const
+{
+	if (point.distanceToPoint(m_center) <= m_r) return true;
+	else return false;
+}

@@ -31,6 +31,9 @@ namespace SimpleApplication
 
 		BoundingRect boudingBox() const override;
 
+		//! Returns whether a point is inside a circle.
+		bool pointInside(const Point2d& point) const override;
+
 		void print() const  override {
 			std::cout << "circle id = " << id() << " r: " << m_r
 				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;

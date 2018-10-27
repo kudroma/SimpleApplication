@@ -43,7 +43,7 @@ namespace SimpleApplication
 
 		//! Returns the area of a rectangle.
 		float area() const;
-				
+
 	private:
 		//! Rectangle width.
 		float m_width = 0.0f;
