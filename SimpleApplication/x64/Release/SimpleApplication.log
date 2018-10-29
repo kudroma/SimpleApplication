@@ -1,0 +1,12 @@
+﻿  AbstractFigure.cpp
+  BoundingRect.cpp
+  Circle.cpp
+  Ellipse.cpp
+  FigureFactory.cpp
+  Point2d.cpp
+  Rectangle.cpp
+  RoundedRect.cpp
+  Trapeze.cpp
+  Triangle.cpp
+  Vector2d.cpp
+  SimpleApplication.vcxproj -> D:\tmp\SimpleApplication\SimpleApplication\\Bin\x64\Release\SimpleApplication.lib
