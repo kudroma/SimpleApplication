@@ -5,13 +5,17 @@
 
 namespace SimpleApplication
 {
+	//! The class represents an circle.
+	/*!
+	Circle has the following parameters:
+	\li radius of the circle;
+	\li center of the circle.
+	*/
 	// The Circle class inherits the properties of the AbstractFigure class.
 	class Circle : public AbstractFigure
 	{
 	public:
-		Circle();
-
-		Circle(int id, const Point2d& center, float r);
+		Circle(int id, Point2d circleCenter, float radius);
 
 		~Circle();
 
@@ -31,7 +35,7 @@ namespace SimpleApplication
 
 		virtual float  area() const override;
 
-		SimpleApplication::BoundingRect boundingRect() const override;
+		BoundingRect boundingRect() const override;
 
 		void print() const  override {
 			std::cout << "circle id = " << id() << " r: " << m_radius
@@ -42,7 +46,13 @@ namespace SimpleApplication
 		//! The radius of the circle.
 		float m_radius = 1.0f;
 
+		//! The angle a[i] and a[i+1]
+		float m_angle = 10.0f;
+
 		//!  Center  of the circle.
 		Point2d m_center;
+
+		// Coordinats point a[i]
+		Point2d coordinatesPointAtAngle(float anglePointAi, int indexAi) const;
 	};
 }

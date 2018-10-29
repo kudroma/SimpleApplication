@@ -5,17 +5,28 @@
 
 namespace SimpleApplication
 {
+       //! //! The class represents an rounded rect.
+	   /*!
+	  Rectangle has the following parameters:
+	   \li have angle radius;
+	   \li width of the rounded rect ;
+	   \li height of the rounded rect.
+	   \li center of the rounded rect.
+	   */
 	class  RoundedRect : public AbstractFigure
 	{
 	public:
 		RoundedRect();
+
+		//! Constructs  rounded rect from coordinates of center, width, height, radius.
 		RoundedRect(int id, const Point2d& center, float w, float h, float r);
+
 		~RoundedRect();
 
 		//!  Returns center  of the rounded rect.
 		Point2d center() const { return m_center; }
 
-		//! Sets setcenter  of the rounded rect.
+		//! Sets center  of the rounded rect.
 		void setCenter(Point2d center) { m_center = center; }
 
 		//!  Returns width  of the rounded rect.
@@ -27,13 +38,13 @@ namespace SimpleApplication
 		//!  Returns height  of the rounded rect.
 		float height() const { return m_height; }
 
-		//! Sets height  of the rounded rect.
+		//! Sets height  of the rectangle.
 		void setHeight(float h) { m_height = h; }
 
-		//!  Returns radius  of the rounded rect.
+		//!  Returns the radius of the corners of the rounded rect.
 		float radius() const { return m_radius; }
 
-		//! Sets radius  of the rounded rect.
+		//! Sets  the radius of the corners of the rounded rect.
 		void setRadius(float r) { m_radius = r; }
 
 		float perimeter() const override;
@@ -46,16 +57,16 @@ namespace SimpleApplication
 			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_width << " height: " << m_height << " radius of angles: " << m_radius << std::endl;
 		}
 	private:
-		//!  Center  of the rounded rect.
+		//!  Center  of the rectangle.
 		Point2d m_center;
 
-		//! Width of the rounded rect.
+		//! Width of the rectangle.
 		float m_width = 0.1f;
 
-		//! Height of the rounded rect.
+		//! Height of the rectangle.
 		float m_height = 0.1f;
 
-		//! Radius  of the rounded rect.
+		//! The radius of the corners of the rectangle.
 		float m_radius = 0.1f;
 	};
 }
