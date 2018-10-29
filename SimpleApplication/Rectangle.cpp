@@ -27,5 +27,5 @@ float Rectangle::area() const
 
 BoundingRect Rectangle::boundingRect() const
 {
-	return BoundingRect(m_center.x(), m_center.y(), m_width, m_height);
+	return BoundingRect(m_center, m_width, m_height);
 }
