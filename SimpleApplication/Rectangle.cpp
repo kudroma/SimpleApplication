@@ -26,7 +26,7 @@ float Rectangle::area() const
 	return m_width * m_height;
 }
 
-BoundingRect Rectangle::boundingRect() const
+BoundingRect Rectangle::boundingBox() const
 {
 	return BoundingRect(m_center, m_width, m_height);
 }

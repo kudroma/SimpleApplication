@@ -19,7 +19,7 @@ namespace SimpleApplication
 		Ellipse();
 
 		//! Constructs ellipse from coordinates of the center, semi-axis and second semi-axis.
-		Ellipse(int id, const Point2d& center, float a, float b, float angle);
+		Ellipse(int id, const Point2d& center, float a, float b);
 
 		~Ellipse();
 
@@ -45,7 +45,7 @@ namespace SimpleApplication
 
 		virtual float  area() const override;
 
-		BoundingRect boudingBox() const  override;
+		BoundingRect boundingBox() const  override;
 
 		void print() const  override {
 			std::cout << "Ellipse  id= " << id() << " a: " << m_a << " b: " << m_b
@@ -63,7 +63,7 @@ namespace SimpleApplication
 		float m_angle = 10.0f;
 		
 		// Coordinats point a[i]
-		Point2d PointInArc(float anglePointAi, int indexAi) const;
+		Point2d pointInArc(float anglePointAi, int indexAi) const;
 		 
 		//!  Center  of the ellipse.
 		Point2d m_center;

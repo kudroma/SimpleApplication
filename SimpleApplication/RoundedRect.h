@@ -51,7 +51,7 @@ namespace SimpleApplication
 
 		float  area() const override;
 
-		BoundingRect boudingBox() const override;
+		BoundingRect boundingBox() const override;
 
 		void print() const override {
 			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_width << " height: " << m_height << " radius of angles: " << m_radius << std::endl;

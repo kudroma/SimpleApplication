@@ -15,7 +15,7 @@ AbstractFigure::~AbstractFigure()
 {
 }
 
-BoundingRect AbstractFigure::boudingBox() const
+BoundingRect AbstractFigure::boundingBox() const
 {
 	auto points = m_points;
 	std::sort(points.begin(), points.end(), [](const Point2d& p1, const Point2d& p2)

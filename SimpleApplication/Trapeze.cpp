@@ -51,10 +51,10 @@ float Trapeze::area() const
 	return (abSide() + cdSide()) / 2 * h;
 }
 
-BoundingRect Trapeze::boundingRect() const
+BoundingRect Trapeze::boundingBox() const
 {
 	const float p = ((abSide() - cdSide()) * (abSide() - cdSide()) + bcSide() * bcSide() - daSide() * daSide())
 		/ (2 * (abSide() - cdSide()));
 	const float h = std::sqrtf(bcSide() * bcSide() - p * p);
-	return BoundingRect(CenterBoundingRectangle(), abSide(), h);
+	return BoundingRect();
 }

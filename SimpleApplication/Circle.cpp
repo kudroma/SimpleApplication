@@ -36,7 +36,7 @@ float Circle::perimeter() const
 	return 2 * m_radius * static_cast<float>(M_PI);
 }
 
-BoundingRect Circle::boundingRect() const
+BoundingRect Circle::boundingBox() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);

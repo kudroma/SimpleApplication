@@ -64,8 +64,8 @@ namespace SimpleApplication
 
 		//! Returns the area of the trapeze.
 		float area() const;
-		
-	private:
-		
+
+        //! Returns bounding box of the trapeze.
+        BoundingRect boundingBox() const override;
 	};
 }

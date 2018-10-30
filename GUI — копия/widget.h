@@ -1,10 +1,10 @@
-#pragma once
+#ifndef WIDGET_H
+#define WIDGET_H
 
 #include <QWidget>
-#include "ui_Widget.h"
 
 namespace Ui {
-    class Widget;
+class Widget;
 }
 
 class Widget : public QWidget
@@ -18,3 +18,5 @@ public:
 private:
     Ui::Widget *ui;
 };
+
+#endif // WIDGET_H
