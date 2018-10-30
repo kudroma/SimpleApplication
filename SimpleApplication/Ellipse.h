@@ -6,31 +6,39 @@
 
 namespace SimpleApplication
 {
+	//! The class represents an ellipse.
+	/*!
+	    Ellipse has the following parameters:
+		\li a semiaxis of the ellipse.;
+		\li b the second semiaxis of the ellipse.
+		\li center of the ellipse
+	*/
 	class Ellipse : public  AbstractFigure
 	{
 	public:
 		Ellipse();
 
-		Ellipse(int id, const Point2d& center, float a, float b);
+		//! Constructs ellipse from coordinates of the center, semi-axis and second semi-axis.
+		Ellipse(int id, const Point2d& center, float a, float b, float angle);
 
 		~Ellipse();
 
-		//! Returns a of the bounding rect.
+		//! Returns semiaxis of the ellipse.
 		float a() const { return m_a; }
 
-		//! Sets setA of the bounding rect.
+		//! Sets semiaxis of the ellipse.
 		void setA(float a) { m_a = a; }
 
-		//! Returns b of the bounding rect.
+		//! Returns the second semiaxis of the ellipse.
 		float b() const { return m_b; }
 
-		//! Sets setB of the bounding rect.
+		//! Sets  the second semiaxisof the ellipse.
 		void setB(float b) { m_b = b; }
 
-		//!  Returns Point2d center  of the bounding rect.
+		//!  Returns the center of the ellipse
 		Point2d center() const { return m_center; }
 
-		//! Sets center  of the bouding rect.
+		//! Sets center  of the ellipse.
 		void setCenter(Point2d center) { m_center = center; }
 
 		virtual float  perimeter() const override;
@@ -44,13 +52,20 @@ namespace SimpleApplication
 				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 	private:
-		//!  Returns  m_a center  of the bounding rect.
+
+		//!  Semiaxis of the ellipse.
 		float m_a = 1.0f;
 
-		//!  Returns  m_b center  of the bounding rect.
+		//!  The second semiaxis of the ellipse.
 		float m_b = 1.0f;
 
-		//!  Center  of the bounding rect.
+		//! The angle of the ellipse. Angle in degrees (угол в градусах)
+		float m_angle = 10.0f;
+		
+		// Coordinats point a[i]
+		Point2d PointInArc(float anglePointAi, int indexAi) const;
+		 
+		//!  Center  of the ellipse.
 		Point2d m_center;
 	};
 }

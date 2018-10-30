@@ -3,35 +3,90 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-
-
-SimpleApplication::RoundedRect::RoundedRect()
+using namespace SimpleApplication;
+RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) 
+	: AbstractFigure(id), m_width(w), m_height(h), m_radius(r), m_center(center)
 {
+	m_points.reserve(8);
+
+	Point2d pointTemp;
+
+	// Coordinates point 1ts
+	auto x = m_center.x - m_width / 2 + m_radius;
+	auto y = m_center.y - m_height / 2;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 2ts
+	x = m_center.x - m_width / 2;
+	y = m_center.y - m_height / 2 + m_radius;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 3ts
+	x = m_center.x - m_width / 2;
+	y = m_center.y + m_width / 2 - m_radius;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 4ts
+	x = m_center.x - m_width / 2 + m_radius;
+	y = m_center.y + m_height / 2;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 5ts
+	x = m_center.x + m_width / 2 - m_radius;
+	y = m_center.y + m_height / 2;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 6ts
+	x = m_center.x + m_width / 2;
+	y = m_center.y + m_width / 2 - m_radius;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 7ts
+	x = m_center.x + m_width / 2;
+	y = m_center.y - m_height / 2 + m_radius;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
+
+	// Coordinates point 8ts
+	x = m_center.x + m_width / 2 - m_radius;
+	y = m_center.y - m_height / 2;
+	pointTemp.setX(x);
+	pointTemp.setY(y);
+	m_points.push_back(pointTemp);
 }
 
-SimpleApplication::RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) : AbstractFigure(id), m_w(w), m_h(h), m_r(r), m_center(center)
-{
-}
-
-SimpleApplication::RoundedRect::~RoundedRect()
+RoundedRect::~RoundedRect()
 {
 }
 
 float  SimpleApplication::RoundedRect::perimeter() const
 {
-	return 2 * (m_w + m_h);
+	return 2 * (m_width + m_height);
 }
 
 float SimpleApplication::RoundedRect::area() const
 {
-	return m_w * m_h;
+	return m_width * m_height;
 }
 
-SimpleApplication::BoundingRect SimpleApplication::RoundedRect::boudingBox() const
+BoundingRect SimpleApplication::RoundedRect::boundingRect() const
 {
 	SimpleApplication::BoundingRect bRect;
 	bRect.setCenter(m_center);
-	bRect.setWidth(m_w);
-	bRect.setHeight(m_h);
+	bRect.setWidth(m_width);
+	bRect.setHeight(m_height);
 	return bRect;
 }

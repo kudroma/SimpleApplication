@@ -41,3 +41,8 @@ float Triangle::area() const
 	const float par = p * (p - abSide()) * (p - bcSide()) * (p - caSide());
 	if (par > 0) return std::sqrtf(par); else return 0;
 }
+
+BoundingRect Triangle::boundingRect() const
+{
+	return BoundingRect(CenterBoundingRectangle(), abSide(), 2 * area() / abSide());
+}
