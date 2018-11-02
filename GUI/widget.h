@@ -17,8 +17,8 @@ public:
 
     ~Widget();
 
-    //! Sets text to label_1.
-    void setTextLabel1(const QString& text);
+	//! Returns text from lineEdit_1.
+	 QString textLineEdit1() const;
 
 	//! Sets text to label_2.
 	void setTextLabel2(const QString& text);
@@ -55,6 +55,36 @@ public:
 
     //! Sets text to lineEdit_1.
     void setTextLineEdit1(const QString& text);
+
+	//! Returns text from lineEdit_2.
+	 QString textLineEdit2() const;
+
+	//! Sets text to lineEdit_2.
+	void setTextLineEdit2(const QString& text);
+
+	//! Returns text  from lineEdit_3.
+	 QString textLineEdit3() const;
+
+	//! Sets text to lineEdit_3.
+	void setTextLineEdit3(const QString& text);
+
+	//! Returns text from lineEdit_4.
+	 QString textLineEdit4() const;
+
+	//! Sets text to lineEdit_4.
+	void setTextLineEdit4(const QString& text);
+
+	//! Returns text  from lineEdit_5.
+	 QString textLineEdit5() const;
+
+	//! Sets text to lineEdit_5.
+	void setTextLineEdit5(const QString& text);
+
+	//! Returns text  from lineEdit_6.
+	 QString textLineEdit6() const;
+
+	//! Sets text to lineEdit_6.
+	void setTextLineEdit6(const QString& text);
 
 private:
     Ui::Widget *ui;
