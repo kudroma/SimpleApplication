@@ -1,5 +1,9 @@
 #include "AbstractFigure.h"
 #include <algorithm>
+#include "Vector2d.h"
+
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 using namespace SimpleApplication;
 
@@ -34,4 +38,25 @@ BoundingRect AbstractFigure::boundingBox() const
 	auto yMax = points.back().y();
 
 	return BoundingRect(Point2d((xMax - xMin) / 2 + xMin, (yMax - yMin) / 2 + yMin), xMax - xMin, yMax - yMin);
+}
+
+bool AbstractFigure::pointInside(const Point2d & point) const
+{
+	float sumPhi = 0;
+	int lastItemNumber = m_points.size() - 1;
+	for (int i = 1; i <= lastItemNumber; i++)
+	{
+		float unsignedAngle = std::acosf(Vector2d(point, m_points[i - 1]).dotProduct(Vector2d(point, m_points[i])) /
+			(point.distanceToPoint(m_points[i - 1]) * point.distanceToPoint(m_points[i])));
+		if (Vector2d(point, m_points[i - 1]).crossProduct(Vector2d(point, m_points[i])) >= 0)
+			sumPhi += unsignedAngle;	else sumPhi -= unsignedAngle;
+	}
+
+	float unsignedAngle = std::acosf(Vector2d(point, m_points[lastItemNumber]).dotProduct(Vector2d(point, m_points[0])) /
+		(point.distanceToPoint(m_points[lastItemNumber]) * point.distanceToPoint(m_points[0])));
+	if (Vector2d(point, m_points[lastItemNumber]).crossProduct(Vector2d(point, m_points[0])) >= 0)
+		sumPhi += unsignedAngle;	else sumPhi -= unsignedAngle;
+	
+	auto epsilon = 1e-3f;
+	if (std::fabsf(sumPhi - 2 * static_cast<float>(M_PI)) < epsilon) return true;	else return false;
 }

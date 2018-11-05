@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Point2d.h"
+
 namespace SimpleApplication
 {
 	//! Class represents vector in 2D space.
@@ -11,6 +13,9 @@ namespace SimpleApplication
 		//! Constructor from \c x and \c y coordinates.
 		Vector2d(float x, float y);
 		
+		//! A constructor that builds a vector by two points: the beginning and the end.
+		Vector2d(Point2d a, Point2d z);
+
 		~Vector2d();
 		
 		//! Returns \c x coordinate of the vector.
