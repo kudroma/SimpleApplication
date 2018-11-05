@@ -54,5 +54,9 @@ namespace GUI
 
 		//! Smart pointer to the figure.
 		std::shared_ptr<SimpleApplication::AbstractFigure> m_figure;
+
+		std::unique_ptr<Widget> m_widget;
+
+		std::unique_ptr<SimpleApplication::AbstractFigure> m_abstractFigure;
 	};
 }
