@@ -86,6 +86,13 @@ public:
 	//! Sets text to lineEdit_6.
 	void setTextLineEdit6(const QString& text);
 
+public slots:
+
+	//! Sets color of the figure.
+	void setFigureColor();
+
 private:
     Ui::Widget *ui;
+
+	QColor m_color;
 };
