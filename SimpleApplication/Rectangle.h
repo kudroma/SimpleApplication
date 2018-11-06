@@ -46,7 +46,7 @@ namespace SimpleApplication
 
         //! Returns bounding box of the rectangle.
         BoundingRect boundingBox() const override;
-				
+	
 	private:
 		//! Rectangle width.
 		float m_width = 0.0f;

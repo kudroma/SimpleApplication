@@ -59,7 +59,7 @@ namespace SimpleApplication
 		//!  The second semiaxis of the ellipse.
 		float m_b = 1.0f;
 
-		//! The angle of the ellipse. Angle in degrees (угол в градусах)
+		//! The angle of the ellipse. Angle in degree
 		float m_angle = 10.0f;
 		
 		// Coordinats point a[i]
