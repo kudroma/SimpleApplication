@@ -166,6 +166,7 @@ void Widget::setVisiblelineEdit_6(bool visible)
 	ui->lineEdit_6->setVisible(visible);
 }
 
+// Parameter for the triangle.
 void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 {
 	setVisiblelineEdit_6(false);
@@ -177,6 +178,7 @@ void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 	setTextLabel5("length of side c");
 }
 
+// Parameter for the rectangle.
 void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 {
 	setVisiblelineEdit_5(false);
@@ -188,11 +190,7 @@ void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 	setTextLabel4("height");
 }
 
-void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
-{
-
-}
-
+// Parameter for the circle.
 void Widget::showCircle(const SimpleApplication::Circle & circle)
 {
 	setVisiblelineEdit_4(false);
@@ -204,6 +202,7 @@ void Widget::showCircle(const SimpleApplication::Circle & circle)
 	setTextLabel3("radius");
 }
 
+// Parameter for the ellipse.
 void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 {
 	setVisiblelineEdit_5(false);
@@ -215,6 +214,7 @@ void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 	setTextLabel4("the second semiaxis");
 }
 
+// Parameter for the roundedRect.
 void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 {
 	setVisiblelineEdit_6(false);
@@ -224,4 +224,10 @@ void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 	setTextLabel3("width");
 	setTextLabel4("height");
 	setTextLabel5("radius");
+}
+
+// Parameter for the trapeze.
+void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
+{
+
 }
