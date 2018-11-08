@@ -34,22 +34,19 @@ namespace GUI
 		//! Sets smart pointer to the figure.
 		void setFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure) { m_figure = figure; }
 
-		//! Draw figure.
+		//! Draws figure.
 		void drawFigure();
-
-		//! Recalculate figure.
-		void recalculateFigure();
 
 		//! Is the point inside the figure.
 		bool pointInsideFigure();
 	
-		//! Create figure.
+		//! Creates figure.
 		void createFigure();
 
-		//! Show figure.
+		//! Shows figure.
 		void showFigure();
 
-		//! Update figure.
+		//! Updates figure.
 		void updateFigure();
 
 	private:

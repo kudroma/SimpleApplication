@@ -97,6 +97,11 @@ public:
 	//! Sets text to lineEdit_6.
 	void setTextLineEdit6(const QString& text);
 
+public slots:
+
+	//! Sets color of the figure.
+	void setFigureColor();
+
 	//! Hides and shows the lineEdit_1
 	void setVisiblelineEdit_1(bool visible);
 
@@ -122,6 +127,9 @@ public:
 	void showCircle(const SimpleApplication::Circle& circle);
 	void showEllipse(const SimpleApplication::Ellipse& ellipse);
 	void showRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
+
 private:
+	QColor m_color;
+
 	Ui::Widget *ui;
 };

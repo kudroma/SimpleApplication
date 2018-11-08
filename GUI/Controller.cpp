@@ -19,10 +19,6 @@ void Controller::drawFigure()
 {
 }
 
-void Controller::recalculateFigure()
-{
-}
-
 bool Controller::pointInsideFigure()
 {
 	return false;

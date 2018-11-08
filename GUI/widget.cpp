@@ -1,4 +1,5 @@
 #include "Widget.h"
+#include <qcolordialog.h>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -12,6 +13,8 @@ Widget::Widget(QWidget *parent) :
 	ui->comboBoxFigure->addItem(QString("Circle"));
 	ui->comboBoxFigure->addItem(QString("Ellipse"));
 	ui->comboBoxFigure->addItem(QString("RoundedRect"));
+
+	connect(ui->pushButtonColor, &QPushButton::clicked, this, &Widget::setFigureColor);
 }
 
 Widget::~Widget()
@@ -134,6 +137,11 @@ void Widget::setTextLineEdit6(const QString & text)
 QString Widget::textLineEdit6() const
 {
 	return ui->lineEdit_6->text();
+}
+
+void Widget::setFigureColor()
+{
+	m_color = QColorDialog::getColor();
 }
 
 void Widget::setVisiblelineEdit_1(bool visible)

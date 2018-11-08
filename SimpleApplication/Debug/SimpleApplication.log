@@ -1,5 +1,16 @@
-﻿  Rectangle.cpp
+﻿  AbstractFigure.cpp
+  BoundingRect.cpp
+  Circle.cpp
+  Ellipse.cpp
+c:\vs\new\simpleapplication\simpleapplication\ellipse.cpp(54): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\vs\new\simpleapplication\simpleapplication\ellipse.cpp(55): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+  FigureFactory.cpp
+  Point2d.cpp
+  Rectangle.cpp
+  RoundedRect.cpp
   Trapeze.cpp
   Triangle.cpp
-  Generating Code...
-  SimpleApplication.vcxproj -> D:\tmp\SimpleApplication\SimpleApplication\Debug\SimpleApplication.exe
+  Vector2d.cpp
+  Создание кода...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: ссылка на неразрешенный внешний символ _main в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\VS\New\SimpleApplication\Debug\SimpleApplication.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
