@@ -87,5 +87,5 @@ public:
 	void setTextLineEdit6(const QString& text);
 
 private:
-    Ui::Widget *ui;
+	Ui::Widget *ui;
 };
