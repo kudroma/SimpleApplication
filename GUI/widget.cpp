@@ -19,9 +19,9 @@ Widget::~Widget()
     delete ui;
 }
 
-QString Widget::textLineEdit1() const
+void Widget::setTextLabel1(const QString & text)
 {
-	return ui->lineEdit_1->text();
+	ui->label_1->setText(text);
 }
 
 void Widget::setTextLabel2(const QString & text)
@@ -134,4 +134,100 @@ void Widget::setTextLineEdit6(const QString & text)
 QString Widget::textLineEdit6() const
 {
 	return ui->lineEdit_6->text();
+}
+
+void Widget::setVisiblelineEdit_1(bool visible)
+{
+	ui->lineEdit_1->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_2(bool visible)
+{
+	ui->lineEdit_2->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_3(bool visible)
+{
+	ui->lineEdit_3->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_4(bool visible)
+{
+	ui->lineEdit_4->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_5(bool visible)
+{
+	ui->lineEdit_5->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_6(bool visible)
+{
+	ui->lineEdit_6->setVisible(visible);
+}
+
+// Parameter for the triangle.
+void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
+{
+	setVisiblelineEdit_6(false);
+	
+	setTextLabel1("center x");
+	setTextLabel2("center y");
+	setTextLabel3("length of side a");
+	setTextLabel4("length of side b");
+	setTextLabel5("length of side c");
+}
+
+// Parameter for the rectangle.
+void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
+{
+	setVisiblelineEdit_5(false);
+	setVisiblelineEdit_6(false);
+
+	setTextLabel1("center x");
+	setTextLabel2("center y");
+	setTextLabel3("width");
+	setTextLabel4("height");
+}
+
+// Parameter for the circle.
+void Widget::showCircle(const SimpleApplication::Circle & circle)
+{
+	setVisiblelineEdit_4(false);
+	setVisiblelineEdit_5(false);
+	setVisiblelineEdit_6(false);
+
+	setTextLabel1("center x");
+	setTextLabel2("center y");
+	setTextLabel3("radius");
+}
+
+// Parameter for the ellipse.
+void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
+{
+	setVisiblelineEdit_5(false);
+	setVisiblelineEdit_6(false);
+
+	setTextLabel1("center x");
+	setTextLabel2("center y");
+	setTextLabel3("semiaxis ");
+	setTextLabel4("the second semiaxis");
+}
+
+// Parameter for the roundedRect.
+void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
+{
+	setVisiblelineEdit_6(false);
+
+	setTextLabel1("center x");
+	setTextLabel2("center y");
+	setTextLabel3("width");
+	setTextLabel4("height");
+	setTextLabel5("radius");
+}
+
+// Parameter for the trapeze.
+void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
+{
+
 }

@@ -70,4 +70,3 @@ namespace SimpleApplication
 		float m_radius = 0.1f;
 	};
 }
-
