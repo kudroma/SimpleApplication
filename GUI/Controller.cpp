@@ -2,6 +2,7 @@
 #include "SimpleApplication/Triangle.h"
 #include "SimpleApplication/Point2d.h"
 
+
 using namespace GUI;
 
 Controller::Controller()
@@ -9,6 +10,7 @@ Controller::Controller()
 	m_widget = std::make_unique<Widget>(nullptr);
 	m_figure = std::make_shared<SimpleApplication::Triangle>(2,SimpleApplication::Point2d(2,4),
 		SimpleApplication::Point2d(3,5), SimpleApplication::Point2d(7,9));
+	m_builder = std::make_unique<PathBuilder>();
 }
 
 Controller::~Controller()
@@ -17,6 +19,9 @@ Controller::~Controller()
 
 void Controller::drawFigure()
 {
+	m_builder->setFigure(m_figure);
+	const auto painterPath = m_builder->drawLines();
+	m_widget->render(painterPath);
 }
 
 bool Controller::pointInsideFigure()

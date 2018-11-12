@@ -10,7 +10,7 @@ PathBuilder::~PathBuilder()
 {
 }
 
-QPainterPath* PathBuilder::drawLines() const
+QPainterPath PathBuilder::drawLines() const
 {
 	auto painterPath = new QPainterPath();
 	
@@ -21,7 +21,7 @@ QPainterPath* PathBuilder::drawLines() const
 		else painterPath->lineTo(convert(points[i]));
 	}
 	
-	return painterPath;
+	return *painterPath;
 }
 
 QPointF PathBuilder::convert(SimpleApplication::Point2d point2d) const

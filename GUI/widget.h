@@ -65,7 +65,7 @@ public:
     void setTextLineEdit1(const QString& text);
 
 	//! Returns text from lineEdit_1.
-	 QString textLineEdit1() const;
+	QString textLineEdit1() const;
 
 	//! Sets text to lineEdit_2.
 	void setTextLineEdit2(const QString& text);
@@ -96,6 +96,9 @@ public:
 
 	//! Sets text to lineEdit_6.
 	void setTextLineEdit6(const QString& text);
+
+	//! Renders QPainterPath.
+	void render(const QPainterPath& path);
 
 public slots:
 

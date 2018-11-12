@@ -88,6 +88,11 @@ void Widget::setTextLineEdit1(const QString & text)
 	
 }
 
+QString Widget::textLineEdit1() const
+{
+	return ui->lineEdit_1->text();
+}
+
 QString Widget::textLineEdit2() const
 {
 	return ui->lineEdit_2->text();
@@ -132,6 +137,13 @@ QString Widget::textLineEdit5() const
 void Widget::setTextLineEdit6(const QString & text)
 {
 	ui->lineEdit_6->setText(text);
+}
+
+void Widget::render(const QPainterPath& path)
+{
+	auto scene = new QGraphicsScene();
+	scene->addPath(path);
+	ui->graphicsView->setScene(scene);
 }
 
 QString Widget::textLineEdit6() const
