@@ -54,3 +54,9 @@ Point2d Circle::coordinatesPointAtAngle(float anglePointA, int indexAi) const
 	pointTemp.setY(y);
 	return pointTemp;
 }
+
+bool SimpleApplication::Circle::pointInside(const Point2d& point) const
+{
+	if (point.distanceToPoint(m_center) <= m_radius) return true;
+	else return false;
+}

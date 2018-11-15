@@ -4,6 +4,14 @@
 #include <QString>
 #include "ui_Widget.h"
 
+#include "SimpleApplication/Triangle.h"
+#include "SimpleApplication/Rectangle.h"
+#include "SimpleApplication/Circle.h"
+#include "SimpleApplication/RoundedRect.h"
+#include "SimpleApplication/Ellipse.h"
+#include "SimpleApplication/Trapeze.h"
+#include "SimpleApplication/BoundingRect.h"
+
 namespace Ui {
     class Widget;
 }
@@ -17,10 +25,10 @@ public:
 
     ~Widget();
 
-	//! Returns text from lineEdit_1.
-	 QString textLineEdit1() const;
-
-	//! Sets text to label_2.
+	//! Sets text to label_1.
+	void setTextLabel1(const QString& text);
+	
+	 //! Sets text to label_2.
 	void setTextLabel2(const QString& text);
 
 	//! Sets text to label_3.
@@ -56,11 +64,14 @@ public:
     //! Sets text to lineEdit_1.
     void setTextLineEdit1(const QString& text);
 
-	//! Returns text from lineEdit_2.
-	 QString textLineEdit2() const;
+	//! Returns text from lineEdit_1.
+	 QString textLineEdit1() const;
 
 	//! Sets text to lineEdit_2.
 	void setTextLineEdit2(const QString& text);
+
+	//! Returns text from lineEdit_2.
+	QString textLineEdit2() const;
 
 	//! Returns text  from lineEdit_3.
 	 QString textLineEdit3() const;
@@ -91,8 +102,34 @@ public slots:
 	//! Sets color of the figure.
 	void setFigureColor();
 
-private:
-    Ui::Widget *ui;
+	//! Hides and shows the lineEdit_1
+	void setVisiblelineEdit_1(bool visible);
 
+	//! Hides and shows the lineEdit_2
+	void setVisiblelineEdit_2(bool visible);
+
+	//! Hides and shows the lineEdit_3
+	void setVisiblelineEdit_3(bool visible);
+
+	//! Hides and shows the lineEdit_4
+	void setVisiblelineEdit_4(bool visible);
+
+	//! Hides and shows the lineEdit_5
+	void setVisiblelineEdit_5(bool visible);
+
+	//! Hides and shows the lineEdit_6
+	void setVisiblelineEdit_6(bool visible);
+
+
+	void showTriangle(const SimpleApplication::Triangle& triangle);
+	void showRectangle(const SimpleApplication::Rectangle& rectangle);
+	void showTrapeze(const SimpleApplication::Trapeze& trapeze);
+	void showCircle(const SimpleApplication::Circle& circle);
+	void showEllipse(const SimpleApplication::Ellipse& ellipse);
+	void showRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
+
+private:
 	QColor m_color;
+
+	Ui::Widget *ui;
 };

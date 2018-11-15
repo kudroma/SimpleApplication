@@ -3,6 +3,7 @@
 #include <memory>
 #include "SimpleApplication/AbstractFigure.h"
 #include <qwidget.h>
+#include "Widget.h"
 
 namespace GUI
 {
@@ -33,15 +34,21 @@ namespace GUI
 		//! Sets smart pointer to the figure.
 		void setFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure) { m_figure = figure; }
 
-		//! Draw figure.
+		//! Draws figure.
 		void drawFigure();
 
-		//! Recalculate figure.
-		void recalculateFigure();
-
 		//! Is the point inside the figure.
-		void pointInsideFigure();
+		bool pointInsideFigure();
 	
+		//! Creates figure.
+		void createFigure();
+
+		//! Shows figure.
+		void showFigure();
+
+		//! Updates figure.
+		void updateFigure();
+
 	private:
 		//! View figure.
 		QWidget* m_view;
@@ -54,5 +61,8 @@ namespace GUI
 
 		//! Smart pointer to the figure.
 		std::shared_ptr<SimpleApplication::AbstractFigure> m_figure;
+
+		//! Smart pointer to Widget.
+		std::unique_ptr<Widget> m_widget;
 	};
 }

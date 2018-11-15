@@ -11,7 +11,7 @@ SimpleApplication::Ellipse::Ellipse()
 }
 
 SimpleApplication::Ellipse::Ellipse(int id, const Point2d & center, float a, float b)
-	: AbstractFigure(id), m_center(center), m_a(a), m_b(b) // angle in degrees (угол в градусах)
+	: AbstractFigure(id), m_center(center), m_a(a), m_b(b) // angle in degrees 
 {
 	int indexI = 0;
 
@@ -48,7 +48,7 @@ SimpleApplication::BoundingRect SimpleApplication::Ellipse::boundingBox() const
 	return bRect;
 }
 
-Point2d Ellipse::pointInArc(float t, int indexPoint) const // t - angle in degrees (угол в градусах)
+Point2d Ellipse::pointInArc(float t, int indexPoint) const // t - angle in degrees 
 {
 	Point2d pointVar;
 	pointVar.setX(m_center.x() + m_a * cos(M_PI / 2 - indexPoint * t));
