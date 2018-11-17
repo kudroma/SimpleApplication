@@ -28,8 +28,8 @@ class Ui_Widget
 {
 public:
     QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout_11;
-    QVBoxLayout *verticalLayout_10;
+    QVBoxLayout *verticalLayout_13;
+    QVBoxLayout *verticalLayout_12;
     QVBoxLayout *verticalLayout_9;
     QLabel *labelFigure;
     QHBoxLayout *horizontalLayout_2;
@@ -55,6 +55,12 @@ public:
     QVBoxLayout *verticalLayout_5;
     QLabel *label_6;
     QLineEdit *lineEdit_6;
+    QVBoxLayout *verticalLayout_11;
+    QLabel *label_7;
+    QLineEdit *lineEdit_7;
+    QVBoxLayout *verticalLayout_10;
+    QLabel *label_8;
+    QLineEdit *lineEdit_8;
     QVBoxLayout *verticalLayout_8;
     QLabel *label_Area;
     QLabel *label_9;
@@ -72,18 +78,19 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(827, 513);
+        Widget->resize(777, 539);
         horizontalLayout_3 = new QHBoxLayout(Widget);
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        verticalLayout_11 = new QVBoxLayout();
-        verticalLayout_11->setSpacing(6);
-        verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
-        verticalLayout_10 = new QVBoxLayout();
-        verticalLayout_10->setSpacing(6);
-        verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
-        verticalLayout_10->setSizeConstraint(QLayout::SetFixedSize);
+        verticalLayout_13 = new QVBoxLayout();
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
+        verticalLayout_13->setSizeConstraint(QLayout::SetFixedSize);
+        verticalLayout_12 = new QVBoxLayout();
+        verticalLayout_12->setSpacing(6);
+        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
+        verticalLayout_12->setSizeConstraint(QLayout::SetFixedSize);
         verticalLayout_9 = new QVBoxLayout();
         verticalLayout_9->setSpacing(6);
         verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
@@ -124,7 +131,7 @@ public:
         verticalLayout_9->addLayout(horizontalLayout_2);
 
 
-        verticalLayout_10->addLayout(verticalLayout_9);
+        verticalLayout_12->addLayout(verticalLayout_9);
 
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
@@ -282,6 +289,54 @@ public:
 
         gridLayout->addLayout(verticalLayout_5, 2, 1, 1, 1);
 
+        verticalLayout_11 = new QVBoxLayout();
+        verticalLayout_11->setSpacing(6);
+        verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
+        verticalLayout_11->setSizeConstraint(QLayout::SetFixedSize);
+        label_7 = new QLabel(Widget);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        sizePolicy.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
+        label_7->setSizePolicy(sizePolicy);
+        label_7->setMinimumSize(QSize(133, 0));
+        label_7->setMaximumSize(QSize(133, 16777215));
+        label_7->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_11->addWidget(label_7);
+
+        lineEdit_7 = new QLineEdit(Widget);
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+        sizePolicy.setHeightForWidth(lineEdit_7->sizePolicy().hasHeightForWidth());
+        lineEdit_7->setSizePolicy(sizePolicy);
+
+        verticalLayout_11->addWidget(lineEdit_7);
+
+
+        gridLayout->addLayout(verticalLayout_11, 3, 0, 1, 1);
+
+        verticalLayout_10 = new QVBoxLayout();
+        verticalLayout_10->setSpacing(6);
+        verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
+        verticalLayout_10->setSizeConstraint(QLayout::SetFixedSize);
+        label_8 = new QLabel(Widget);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
+        label_8->setSizePolicy(sizePolicy);
+        label_8->setMinimumSize(QSize(133, 0));
+        label_8->setMaximumSize(QSize(133, 16777215));
+        label_8->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_10->addWidget(label_8);
+
+        lineEdit_8 = new QLineEdit(Widget);
+        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
+        sizePolicy.setHeightForWidth(lineEdit_8->sizePolicy().hasHeightForWidth());
+        lineEdit_8->setSizePolicy(sizePolicy);
+
+        verticalLayout_10->addWidget(lineEdit_8);
+
+
+        gridLayout->addLayout(verticalLayout_10, 3, 1, 1, 1);
+
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
@@ -306,7 +361,7 @@ public:
         verticalLayout_8->addWidget(label_9);
 
 
-        gridLayout->addLayout(verticalLayout_8, 3, 0, 1, 1);
+        gridLayout->addLayout(verticalLayout_8, 4, 0, 1, 1);
 
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
@@ -332,10 +387,10 @@ public:
         verticalLayout_7->addWidget(label_10);
 
 
-        gridLayout->addLayout(verticalLayout_7, 3, 1, 1, 1);
+        gridLayout->addLayout(verticalLayout_7, 4, 1, 1, 1);
 
 
-        verticalLayout_10->addLayout(gridLayout);
+        verticalLayout_12->addLayout(gridLayout);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -357,17 +412,17 @@ public:
         horizontalLayout->addItem(horizontalSpacer_2);
 
 
-        verticalLayout_10->addLayout(horizontalLayout);
+        verticalLayout_12->addLayout(horizontalLayout);
 
 
-        verticalLayout_11->addLayout(verticalLayout_10);
+        verticalLayout_13->addLayout(verticalLayout_12);
 
-        verticalSpacer = new QSpacerItem(20, 228, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 178, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_11->addItem(verticalSpacer);
+        verticalLayout_13->addItem(verticalSpacer);
 
 
-        horizontalLayout_3->addLayout(verticalLayout_11);
+        horizontalLayout_3->addLayout(verticalLayout_13);
 
         graphicsView = new QGraphicsView(Widget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
@@ -394,6 +449,8 @@ public:
         label_4->setText(QApplication::translate("Widget", "lineEdit_4", nullptr));
         label_5->setText(QApplication::translate("Widget", "lineEdit_5", nullptr));
         label_6->setText(QApplication::translate("Widget", "lineEdit_6", nullptr));
+        label_7->setText(QApplication::translate("Widget", "lineEdit_7", nullptr));
+        label_8->setText(QApplication::translate("Widget", "lineEdit_8", nullptr));
         label_Area->setText(QApplication::translate("Widget", "Area", nullptr));
         label_9->setText(QString());
         label_Perimeter->setText(QApplication::translate("Widget", "Perimeter", nullptr));

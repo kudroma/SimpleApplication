@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
-    <height>513</height>
+    <width>777</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,9 +15,12 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_11">
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
+      <layout class="QVBoxLayout" name="verticalLayout_12">
        <property name="sizeConstraint">
         <enum>QLayout::SetFixedSize</enum>
        </property>
@@ -441,6 +444,96 @@
           </layout>
          </item>
          <item row="3" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetFixedSize</enum>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>133</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>133</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>lineEdit_7</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_7">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetFixedSize</enum>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>133</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>133</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>lineEdit_8</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_8">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="4" column="0">
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <property name="sizeConstraint">
             <enum>QLayout::SetFixedSize</enum>
@@ -500,7 +593,7 @@
            </item>
           </layout>
          </item>
-         <item row="3" column="1">
+         <item row="4" column="1">
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <property name="sizeConstraint">
             <enum>QLayout::SetFixedSize</enum>
@@ -624,7 +717,7 @@
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>228</height>
+         <height>178</height>
         </size>
        </property>
       </spacer>

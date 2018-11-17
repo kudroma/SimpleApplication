@@ -43,6 +43,12 @@ public:
 	//! Sets text to label_6.
 	void setTextLabel6(const QString& text);
 
+	//! Sets text to label_7.
+	void setTextLabel7(const QString& text);
+
+	//! Sets text to label_8.
+	void setTextLabel8(const QString& text);
+	
 	//! Hides and shows the label_1.
 	void setVisibleLabel1(bool visible);
 
@@ -61,7 +67,13 @@ public:
 	//! Hides and shows the label_6.
 	void setVisibleLabel6(bool visible);
 
-    //! Sets text to lineEdit_1.
+	//! Hides and shows the label_7.
+	void setVisibleLabel7(bool visible);
+
+	//! Hides and shows the label_8.
+	void setVisibleLabel8(bool visible);
+	
+	//! Sets text to lineEdit_1.
     void setTextLineEdit1(const QString& text);
 
 	//! Returns text from lineEdit_1.
@@ -97,6 +109,18 @@ public:
 	//! Sets text to lineEdit_6.
 	void setTextLineEdit6(const QString& text);
 
+	//! Sets text to lineEdit_7.
+	void setTextLineEdit7(const QString& text);
+
+	//! Returns text from lineEdit_7.
+	QString textLineEdit7() const;
+
+	//! Sets text to lineEdit_8.
+	void setTextLineEdit8(const QString& text);
+
+	//! Returns text from lineEdit_8.
+	QString textLineEdit8() const;
+
 public slots:
 
 	//! Sets color of the figure.
@@ -120,6 +144,11 @@ public slots:
 	//! Hides and shows the lineEdit_6
 	void setVisiblelineEdit_6(bool visible);
 
+	//! Hides and shows the lineEdit_7
+	void setVisiblelineEdit_7(bool visible);
+
+	//! Hides and shows the lineEdit_8
+	void setVisiblelineEdit_8(bool visible);
 
 	void showTriangle(const SimpleApplication::Triangle& triangle);
 	void showRectangle(const SimpleApplication::Rectangle& rectangle);
