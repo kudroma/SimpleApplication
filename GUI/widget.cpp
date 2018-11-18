@@ -181,9 +181,9 @@ void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 	
 	setTextLabel1("center x");
 	setTextLabel2("center y");
-	setTextLabel3("length of side a");
-	setTextLabel4("length of side b");
-	setTextLabel5("length of side c");
+	setTextLabel3("length of side ab");
+	setTextLabel4("length of side bc");
+	setTextLabel5("length of side ca");
 }
 
 // Parameter for the rectangle.
