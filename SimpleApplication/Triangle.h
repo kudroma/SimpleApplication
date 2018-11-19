@@ -55,6 +55,9 @@ namespace SimpleApplication
 		//! Returns the area of a triangle.
 		float area() const;
 
+		//! Center of the triangle.
+		void center() const;
+
 	private:
 		
 	};

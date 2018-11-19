@@ -41,3 +41,8 @@ float Triangle::area() const
 	const float par = p * (p - abSide()) * (p - bcSide()) * (p - caSide());
 	if (par > 0) return std::sqrtf(par); else return 0;
 }
+
+void Triangle::center() const
+{
+
+}
