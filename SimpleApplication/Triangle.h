@@ -55,8 +55,8 @@ namespace SimpleApplication
 		//! Returns the area of a triangle.
 		float area() const;
 
-		//! Center of the triangle.
-		void center() const;
+		//! Returns the center of the triangle.
+		Point2d center() const;
 
 	private:
 		
