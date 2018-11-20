@@ -52,6 +52,16 @@ void Widget::setTextLabel6(const QString & text)
 	ui->label_6->setText(text);
 }
 
+void Widget::setTextLabel7(const QString & text)
+{
+	ui->label_7->setText(text);
+}
+
+void Widget::setTextLabel8(const QString & text)
+{
+	ui->label_8->setText(text);
+}
+
 void Widget::setVisibleLabel1(bool visible)
 {
 	ui->label_1->setVisible(visible);
@@ -80,6 +90,21 @@ void Widget::setVisibleLabel5(bool visible)
 void Widget::setVisibleLabel6(bool visible)
 {
 	ui->label_6->setVisible(visible);
+}
+
+void Widget::setVisibleLabel7(bool visible)
+{
+	ui->label_7->setVisible(visible);
+}
+
+void Widget::setVisibleLabel8(bool visible)
+{
+	ui->label_8->setVisible(visible);
+}
+
+QString Widget::textLineEdit1() const
+{
+	return ui->lineEdit_1->text();
 }
 
 void Widget::setTextLineEdit1(const QString & text)
@@ -151,6 +176,26 @@ QString Widget::textLineEdit6() const
 	return ui->lineEdit_6->text();
 }
 
+void Widget::setTextLineEdit7(const QString & text)
+{
+	ui->lineEdit_7->setText(text);
+}
+
+QString Widget::textLineEdit7() const
+{
+	return ui->lineEdit_7->text();
+}
+
+void Widget::setTextLineEdit8(const QString & text)
+{
+	ui->lineEdit_8->setText(text);
+}
+
+QString Widget::textLineEdit8() const
+{
+	return ui->lineEdit_8->text();
+}
+
 void Widget::setFigureColor()
 {
 	m_color = QColorDialog::getColor();
@@ -184,6 +229,16 @@ void Widget::setVisiblelineEdit_5(bool visible)
 void Widget::setVisiblelineEdit_6(bool visible)
 {
 	ui->lineEdit_6->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_7(bool visible)
+{
+	ui->lineEdit_7->setVisible(visible);
+}
+
+void Widget::setVisiblelineEdit_8(bool visible)
+{
+	ui->lineEdit_8->setVisible(visible);
 }
 
 // Parameter for the triangle.
