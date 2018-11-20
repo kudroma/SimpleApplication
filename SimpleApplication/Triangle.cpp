@@ -41,3 +41,9 @@ float Triangle::area() const
 	const float par = p * (p - abSide()) * (p - bcSide()) * (p - caSide());
 	if (par > 0) return std::sqrtf(par); else return 0;
 }
+
+Point2d Triangle::center() const
+{
+	return Point2d((m_points[0].x() + m_points[1].x() + m_points[2].x()) / 3.0, 
+		(m_points[0].y() + m_points[1].y() + m_points[2].y()) / 3.0);
+}

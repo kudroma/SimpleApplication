@@ -4,6 +4,7 @@
 #include "SimpleApplication/AbstractFigure.h"
 #include <qwidget.h>
 #include "Widget.h"
+#include "PathBuilder.h"
 
 #include "SimpleApplication/Triangle.h"
 #include "SimpleApplication/Rectangle.h"
@@ -81,6 +82,7 @@ namespace GUI
 		//! Smart pointer to Widget.
 		std::unique_ptr<Widget> m_widget;
 
-
+		//! Smart pointer to PathBuilder.
+		std::unique_ptr<PathBuilder> m_builder;
 	};
 }
