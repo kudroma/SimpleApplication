@@ -6,6 +6,12 @@
 #include "Widget.h"
 
 #include "SimpleApplication/Triangle.h"
+#include "SimpleApplication/Rectangle.h"
+#include "SimpleApplication/Circle.h"
+#include "SimpleApplication/RoundedRect.h"
+#include "SimpleApplication/Ellipse.h"
+#include "SimpleApplication/Trapeze.h"
+#include "SimpleApplication/BoundingRect.h"
 
 namespace GUI
 {
@@ -51,9 +57,14 @@ namespace GUI
 		//! Updates figure.
 		void updateFigure();
 
-    private:
-        void renderTriangle(const SimpleApplication::Circle& triangle);
+	private:
 
+		void loadCircle(const SimpleApplication::Circle&circle);
+		void loadTriangle(const SimpleApplication::Triangle&triangle);
+		void loadRectangle(const SimpleApplication::Rectangle&rectangle);
+		void loadEllipse(const SimpleApplication::Ellipse&ellipse);
+		void loadRoundedRect(const SimpleApplication::RoundedRect&roundedRect);
+	
 	private:
 		//! View figure.
 		QWidget* m_view;
