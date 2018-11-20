@@ -2,6 +2,8 @@
 #include "SimpleApplication/Triangle.h"
 #include "SimpleApplication/Point2d.h"
 
+#include "SimpleApplication/Point2d.h"
+
 using namespace GUI;
 
 Controller::Controller()
@@ -17,6 +19,7 @@ Controller::~Controller()
 
 void Controller::drawFigure()
 {
+
 }
 
 bool Controller::pointInsideFigure()

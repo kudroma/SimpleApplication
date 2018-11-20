@@ -5,6 +5,8 @@
 #include <qwidget.h>
 #include "Widget.h"
 
+#include "SimpleApplication/Triangle.h"
+
 namespace GUI
 {
 	//! Class connecting GUI and SimpleApplication.
@@ -49,6 +51,9 @@ namespace GUI
 		//! Updates figure.
 		void updateFigure();
 
+    private:
+        void renderTriangle(const SimpleApplication::Circle& triangle);
+
 	private:
 		//! View figure.
 		QWidget* m_view;
@@ -64,5 +69,7 @@ namespace GUI
 
 		//! Smart pointer to Widget.
 		std::unique_ptr<Widget> m_widget;
+
+
 	};
 }

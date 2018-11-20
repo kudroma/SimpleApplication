@@ -74,7 +74,7 @@ public:
 	QString textLineEdit2() const;
 
 	//! Returns text  from lineEdit_3.
-	 QString textLineEdit3() const;
+	QString textLineEdit3() const;
 
 	//! Sets text to lineEdit_3.
 	void setTextLineEdit3(const QString& text);
