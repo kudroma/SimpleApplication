@@ -49,6 +49,27 @@ void Controller::updateFigure()
 {
 }
 
+void Controller::loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure)
+{
+	bool isCircle = std::is_same<SimpleApplication::Circle*, decltype(figure.get())>::value;
+	if (isCircle) Controller::loadCircle(*std::static_pointer_cast<SimpleApplication::Circle>(figure));
+	
+	bool isEllipse = std::is_same<SimpleApplication::Ellipse*, decltype(figure.get())>::value;
+	if (isEllipse) Controller::loadEllipse(*std::static_pointer_cast<SimpleApplication::Ellipse>(figure));
+	
+	bool isRectangle = std::is_same<SimpleApplication::Rectangle*, decltype(figure.get())>::value;
+	if (isRectangle) Controller::loadRectangle(*std::static_pointer_cast<SimpleApplication::Rectangle>(figure));
+	
+	bool isTriangle = std::is_same<SimpleApplication::Triangle*, decltype(figure.get())>::value;
+	if (isTriangle) Controller::loadTriangle(*std::static_pointer_cast<SimpleApplication::Triangle>(figure));
+	
+	bool isRoundedRect = std::is_same<SimpleApplication::RoundedRect*, decltype(figure.get())>::value;
+	if (isRoundedRect) Controller::loadRoundedRect(*std::static_pointer_cast<SimpleApplication::RoundedRect>(figure));
+	
+	//bool isTrapeze = std::is_same<SimpleApplication::Trapeze*, decltype(figure.get())>::value;
+	//if (isTrapeze) Controller::loadTrapeze(*std::static_pointer_cast<SimpleApplication::Trapeze>(figure));
+}
+
 void GUI::Controller::loadCircle(const SimpleApplication::Circle & circle)
 {
 	m_widget->showCircle(circle);

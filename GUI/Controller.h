@@ -58,6 +58,10 @@ namespace GUI
 		//! Updates figure.
 		void updateFigure();
 
+	private slots:
+		//! Loads figure.
+		void loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure);
+
 	private:
 
 		void loadCircle(const SimpleApplication::Circle&circle);
