@@ -2,8 +2,8 @@
 
 using namespace SimpleApplication;
 
-Trapeze::Trapeze(int id, Point2d a, Point2d b, Point2d c, Point2d d)
-	: AbstractFigure(id)
+Trapeze::Trapeze(Point2d a, Point2d b, Point2d c, Point2d d)
+	: AbstractFigure()
 {
 	m_points.reserve(4);
 	if (a.y() != b.y()) b.setY(a.y());

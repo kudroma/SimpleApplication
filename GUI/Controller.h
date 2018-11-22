@@ -49,9 +49,6 @@ namespace GUI
 		//! Is the point inside the figure.
 		bool pointInsideFigure();
 	
-		//! Creates figure.
-		void createFigure();
-
 		//! Shows figure.
 		void showFigure();
 
@@ -61,6 +58,9 @@ namespace GUI
 	private slots:
 		//! Loads figure.
 		void loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure);
+
+		//! Creates figure.
+		void createFigure(const QString& text);
 
 	private:
 

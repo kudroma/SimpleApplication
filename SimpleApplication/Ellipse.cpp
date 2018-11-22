@@ -10,8 +10,8 @@ SimpleApplication::Ellipse::Ellipse()
 {
 }
 
-SimpleApplication::Ellipse::Ellipse(int id, const Point2d & center, float a, float b)
-	: AbstractFigure(id), m_center(center), m_a(a), m_b(b) // angle in degrees 
+SimpleApplication::Ellipse::Ellipse(const Point2d & center, float a, float b)
+	: AbstractFigure(), m_center(center), m_a(a), m_b(b) // angle in degrees 
 {
 	int indexI = 0;
 

@@ -8,8 +8,8 @@ namespace SimpleApplication
 	class Triangle : public AbstractFigure
 	{
 	public:
-		//! The constructor creates a triangle from the identifier and the coordinates of the vertices.
-		Triangle(int id, Point2d a, Point2d b, Point2d c);
+		//! The constructor creates a triangle the coordinates of the vertices.
+		Triangle(Point2d a, Point2d b, Point2d c);
 
 		~Triangle();
 		
@@ -43,7 +43,7 @@ namespace SimpleApplication
 		//! Displays triangle parameters.
 		void print() const
 		{
-			std::cout << "triangle: id: " << id();
+			std::cout << "triangle:";
 			std::cout << " a: x: " << m_points[0].x() << " y: " << m_points[0].y();
 			std::cout << " b: x: " << m_points[1].x() << " y: " << m_points[1].y();
 			std::cout << " c: x: " << m_points[2].x() << " y: " << m_points[2].y() << std::endl;

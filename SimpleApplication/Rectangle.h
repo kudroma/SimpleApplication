@@ -8,8 +8,8 @@ namespace SimpleApplication
 	class Rectangle : public AbstractFigure
 	{
 	public:
-		//! The constructor creates a rectangle from identifier by the coordinates of the center, width and height.
-		Rectangle(int id, Point2d point, float width, float height);
+		//! The constructor creates a rectangle by the coordinates of the center, width and height.
+		Rectangle(Point2d point, float width, float height);
 
 		~Rectangle();
 
@@ -34,7 +34,7 @@ namespace SimpleApplication
 		//! Displays rectangle parameters.
 		void print() const
 		{
-			std::cout << "rectangle: id: " << id() << " width: " << m_width << " height: " << m_height;
+			std::cout << "rectangle: width: " << m_width << " height: " << m_height;
 			std::cout << " center: x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 

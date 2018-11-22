@@ -19,7 +19,7 @@ namespace SimpleApplication
 		RoundedRect();
 
 		//! Constructs  rounded rect from coordinates of center, width, height, radius.
-		RoundedRect(int id, const Point2d& center, float w, float h, float r);
+		RoundedRect(const Point2d& center, float w, float h, float r);
 
 		~RoundedRect();
 
@@ -54,7 +54,9 @@ namespace SimpleApplication
 		BoundingRect boundingBox() const override;
 
 		void print() const override {
-			std::cout << "roanded rectangle id = " << id() << " x: " << m_center.x() << " y: " << m_center.y() << " width: " << m_width << " height: " << m_height << " radius of angles: " << m_radius << std::endl;
+			std::cout << "roanded rectangle x: " << m_center.x() << " y: " << m_center.y() << 
+			" width: " << m_width << " height: " << m_height << " radius of angles: " <<
+			m_radius << std::endl;
 		}
 	private:
 		//!  Center  of the rectangle.

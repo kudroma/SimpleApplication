@@ -2,8 +2,8 @@
 
 using namespace SimpleApplication;
 
-Triangle::Triangle(int id, Point2d a, Point2d b, Point2d c)
-	: AbstractFigure(id)
+Triangle::Triangle(Point2d a, Point2d b, Point2d c)
+	: AbstractFigure()
 {
 	m_points.reserve(3);
 	m_points.push_back(a);

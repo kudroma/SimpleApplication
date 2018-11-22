@@ -4,8 +4,9 @@
 #include <math.h>
 
 using namespace SimpleApplication;
-RoundedRect::RoundedRect(int id, const Point2d& center, float w, float h, float r) 
-	: AbstractFigure(id), m_width(w), m_height(h), m_radius(r), m_center(center)
+
+RoundedRect::RoundedRect(const Point2d& center, float w, float h, float r) 
+	: AbstractFigure(), m_width(w), m_height(h), m_radius(r), m_center(center)
 {
 	m_points.reserve(8);
 

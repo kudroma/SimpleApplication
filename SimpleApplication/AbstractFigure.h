@@ -14,21 +14,13 @@ namespace SimpleApplication
 	class AbstractFigure
 	{
 	public:
+		//! Constructor.
 		AbstractFigure();
-
-        //! Constructor from identifier.
-		AbstractFigure(int id);
 
 		~AbstractFigure();
 
         //! Prints general description of the object.
 		virtual void print() const { std::cout << "object" << std::endl; }
-
-        //! Returns identifier of the figure.
-		int id() const { return m_id; }
-
-        //! Sets identifier of the figure.
-		void setId(int id) { m_id = id; }
 
         //! Returns perimeter of the figure.
 		virtual float perimeter() const = 0;
@@ -46,9 +38,7 @@ namespace SimpleApplication
 		std::vector<Point2d> points() const { return m_points; }
 
 	private:
-        //! Identifier of the figure.
-		int m_id = 0;
-	
+        	
 	protected:
 		//! Vector in which the vertices of the shape are stored.
 		std::vector<Point2d> m_points;

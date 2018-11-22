@@ -8,8 +8,8 @@
 
 using namespace SimpleApplication;
 
-Circle::Circle(int id, Point2d circleCenter, float radius)
-	: AbstractFigure(id), m_center(circleCenter), m_radius(radius)
+Circle::Circle(Point2d circleCenter, float radius)
+	: AbstractFigure(), m_center(circleCenter), m_radius(radius)
 {
 	int indexI = 0;
 

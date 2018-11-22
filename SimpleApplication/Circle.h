@@ -15,7 +15,7 @@ namespace SimpleApplication
 	class Circle : public AbstractFigure
 	{
 	public:
-		Circle(int id, Point2d circleCenter, float radius);
+		Circle(Point2d circleCenter, float radius);
 
 		~Circle();
 
@@ -41,7 +41,7 @@ namespace SimpleApplication
 		bool pointInside(const Point2d& point) const override;
 
 		void print() const  override {
-			std::cout << "circle id = " << id() << " r: " << m_radius
+			std::cout << "circle r: " << m_radius
 				<< " x: " << m_center.x() << " y: " << m_center.y() << std::endl;
 		}
 	private:

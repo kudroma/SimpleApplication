@@ -8,8 +8,8 @@ namespace SimpleApplication
 	class Trapeze : public AbstractFigure
 	{
 	public:
-		//! The constructor creates a trapeze from the identifier and the coordinates of the vertices.
-		Trapeze(int id, Point2d a, Point2d b, Point2d c, Point2d d);
+		//! The constructor creates a trapeze the coordinates of the vertices.
+		Trapeze(Point2d a, Point2d b, Point2d c, Point2d d);
 
 		~Trapeze();
 
@@ -52,7 +52,7 @@ namespace SimpleApplication
 		//! Displays trapeze parameters.
 		void print() const
 		{
-			std::cout << "trapeze: id: " << id();
+			std::cout << "trapeze:";
 			std::cout << " a: x: " << m_points[0].x() << " y: " << m_points[0].y();
 			std::cout << " b: x: " << m_points[1].x() << " y: " << m_points[1].y();
 			std::cout << " c: x: " << m_points[2].x() << " y: " << m_points[2].y();

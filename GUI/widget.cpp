@@ -102,11 +102,6 @@ void Widget::setVisibleLabel8(bool visible)
 	ui->label_8->setVisible(visible);
 }
 
-QString Widget::textLineEdit1() const
-{
-	return ui->lineEdit_1->text();
-}
-
 void Widget::setTextLineEdit1(const QString & text)
 {
     ui->lineEdit_1->setText(text);
