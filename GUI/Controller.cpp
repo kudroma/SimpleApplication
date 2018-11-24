@@ -99,3 +99,17 @@ void GUI::Controller::loadRoundedRect(const SimpleApplication::RoundedRect & rou
 	m_widget->setTextLineEdit4(QString("%1").arg(roundedRect.height()));
 	m_widget->setTextLineEdit5(QString("%1").arg(roundedRect.radius()));
 }
+
+void GUI::Controller::loadTrapeze(const SimpleApplication::Trapeze & trapeze)
+{
+	m_widget->showTrapeze(trapeze);
+
+	m_widget->setTextLineEdit1(QString("%1").arg(trapeze.a().x()));
+	m_widget->setTextLineEdit2(QString("%1").arg(trapeze.a().y()));
+	m_widget->setTextLineEdit3(QString("%1").arg(trapeze.b().x()));
+	m_widget->setTextLineEdit4(QString("%1").arg(trapeze.b().y()));
+	m_widget->setTextLineEdit5(QString("%1").arg(trapeze.c().x()));
+	m_widget->setTextLineEdit6(QString("%1").arg(trapeze.c().y()));
+	m_widget->setTextLineEdit7(QString("%1").arg(trapeze.d().x()));
+	m_widget->setTextLineEdit8(QString("%1").arg(trapeze.d().y()));
+}
