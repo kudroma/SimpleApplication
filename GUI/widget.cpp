@@ -113,11 +113,6 @@ void Widget::setTextLineEdit1(const QString & text)
 	
 }
 
-QString Widget::textLineEdit1() const
-{
-	return ui->lineEdit_1->text();
-}
-
 QString Widget::textLineEdit2() const
 {
 	return ui->lineEdit_2->text();
