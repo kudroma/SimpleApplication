@@ -8,6 +8,7 @@ using namespace SimpleApplication;
 RoundedRect::RoundedRect(const Point2d& center, float w, float h, float r) 
 	: AbstractFigure(), m_width(w), m_height(h), m_radius(r), m_center(center)
 {
+	m_name = "RoundedRect";
 	m_points.reserve(8);
 
 	Point2d pointTemp;

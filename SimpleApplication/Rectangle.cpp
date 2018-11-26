@@ -5,6 +5,7 @@ using namespace SimpleApplication;
 Rectangle::Rectangle(Point2d point, float width, float height)
 	: AbstractFigure(), m_center(point), m_width(width), m_height(height)
 {
+	m_name = "Rectangle";
 	m_points.reserve(4);
 	m_points.push_back(Point2d(m_center.x() - width / 2, m_center.y() + height / 2));
 	m_points.push_back(Point2d(m_center.x() + width / 2, m_center.y() + height / 2));

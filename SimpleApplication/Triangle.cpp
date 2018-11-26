@@ -5,6 +5,7 @@ using namespace SimpleApplication;
 Triangle::Triangle(Point2d a, Point2d b, Point2d c)
 	: AbstractFigure()
 {
+	m_name = "Triangle";
 	m_points.reserve(3);
 	m_points.push_back(a);
 	m_points.push_back(b);

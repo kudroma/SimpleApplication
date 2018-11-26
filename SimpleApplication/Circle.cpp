@@ -11,6 +11,7 @@ using namespace SimpleApplication;
 Circle::Circle(Point2d circleCenter, float radius)
 	: AbstractFigure(), m_center(circleCenter), m_radius(radius)
 {
+	m_name = "Circle";
 	int indexI = 0;
 
 	while (m_angle*indexI < 360)

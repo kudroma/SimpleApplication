@@ -13,6 +13,7 @@ SimpleApplication::Ellipse::Ellipse()
 SimpleApplication::Ellipse::Ellipse(const Point2d & center, float a, float b)
 	: AbstractFigure(), m_center(center), m_a(a), m_b(b) // angle in degrees 
 {
+	m_name = "Ellipse";
 	int indexI = 0;
 
     const auto angle = M_PI / 20;

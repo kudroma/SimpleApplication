@@ -33,6 +33,9 @@ namespace SimpleApplication
 
 		//! Returns whether a point is inside a figure.
 		virtual bool pointInside(const Point2d& point) const;
+
+		//! Returns the figure name.
+		std::string name() const { return m_name; }
 		
         //! Returns the vector of vertex points of the figure.
 		std::vector<Point2d> points() const { return m_points; }
@@ -40,6 +43,9 @@ namespace SimpleApplication
 	private:
         	
 	protected:
+		//! Datas member with figure name.
+		std::string m_name;
+
 		//! Vector in which the vertices of the shape are stored.
 		std::vector<Point2d> m_points;
 	};

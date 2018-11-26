@@ -5,6 +5,7 @@ using namespace SimpleApplication;
 Trapeze::Trapeze(Point2d a, Point2d b, Point2d c, Point2d d)
 	: AbstractFigure()
 {
+	m_name = "Trapeze";
 	m_points.reserve(4);
 	if (a.y() != b.y()) b.setY(a.y());
 	if (c.y() != d.y()) d.setY(c.y());
