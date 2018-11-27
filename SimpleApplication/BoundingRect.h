@@ -52,4 +52,3 @@ namespace SimpleApplication
 		Point2d m_center;
 	};
 }
-

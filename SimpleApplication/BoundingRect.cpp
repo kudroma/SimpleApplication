@@ -14,6 +14,4 @@ BoundingRect::BoundingRect(const Point2d& center, float width, float height) :  
 
 BoundingRect::~BoundingRect()
 {
-}
-
-  
+} 

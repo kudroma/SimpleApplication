@@ -60,11 +60,22 @@ namespace GUI
 
 	private:
 
+		//! Loads a circle into the user interface.
 		void loadCircle(const SimpleApplication::Circle&circle);
+
+		//! Loads a triangle into the user interface.
 		void loadTriangle(const SimpleApplication::Triangle&triangle);
+
+		//! Loads a rectangle into the user interface.
 		void loadRectangle(const SimpleApplication::Rectangle&rectangle);
+
+		//! Loads a ellipse into the user interface.
 		void loadEllipse(const SimpleApplication::Ellipse&ellipse);
+
+		//! Loads a roundedRect into the user interface.
 		void loadRoundedRect(const SimpleApplication::RoundedRect&roundedRect);
+
+		//! Loads a trapeze into the user interface.
 		void loadTrapeze(const SimpleApplication::Trapeze&trapeze);
 	
 	private:
