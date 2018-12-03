@@ -50,38 +50,38 @@ void Controller::createFigure(const QString& text)
 	if (text == "Rectangle")
 	{
 		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Rectangle,
-			SimpleApplication::Point2d(5,7), 4, 8);
+			3, SimpleApplication::Point2d(5,7), 4, 8);
 		loadFigure(m_figure);
 	}
 	if (text == "Triangle")
 	{
 		auto triangle = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Triangle,
-			SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3));
+			3, SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3));
 		loadFigure(triangle);
 	}
 	if (text == "Trapeze")
 	{
 		auto trapeze = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Trapeze,
-			SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3),
+			4, SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3),
 			SimpleApplication::Point2d(7, 1));
 		loadFigure(trapeze);
 	}
 	if (text == "Circle")
 	{
 		auto circle = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Circle,
-			SimpleApplication::Point2d(4, 7), 5);
+			2, SimpleApplication::Point2d(4, 7), 5);
 		loadFigure(circle);
 	}
 	if (text == "Ellipse")
 	{
 		auto ellipse = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Ellipse,
-			SimpleApplication::Point2d(3, 6), 4, 8);
+			3, SimpleApplication::Point2d(3, 6), 4, 8);
 		loadFigure(ellipse);
 	}
 	if (text == "RoundedRect")
 	{
 		auto roundedRect = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::RoundedRect,
-			SimpleApplication::Point2d(2, 6), 3, 5, 7);
+			4, SimpleApplication::Point2d(2, 6), 3, 5, 7);
 		loadFigure(roundedRect);
 	}
 }
