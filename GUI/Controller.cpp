@@ -18,6 +18,7 @@ Controller::Controller()
 	m_figure = std::make_shared<SimpleApplication::Triangle>(SimpleApplication::Point2d(2,4),
 		SimpleApplication::Point2d(3,5), SimpleApplication::Point2d(7,9));
 	m_builder = std::make_unique<PathBuilder>();
+    createFigure("Rectangle");
 }
 
 Controller::~Controller()
@@ -48,9 +49,9 @@ void Controller::createFigure(const QString& text)
 {
 	if (text == "Rectangle")
 	{
-		auto rectangle = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Rectangle,
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Rectangle,
 			SimpleApplication::Point2d(5,7), 4, 8);
-		loadFigure(rectangle);
+		loadFigure(m_figure);
 	}
 	if (text == "Triangle")
 	{
