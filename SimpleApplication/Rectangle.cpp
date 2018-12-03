@@ -2,6 +2,16 @@
 
 using namespace SimpleApplication;
 
+Rectangle::Rectangle()
+{
+	m_name = "Rectangle";
+	m_points.reserve(4);
+	m_points.push_back(Point2d(10, 10));
+	m_points.push_back(Point2d(5, 10));
+	m_points.push_back(Point2d(5, 5));
+	m_points.push_back(Point2d(10, 5));
+}
+
 Rectangle::Rectangle(Point2d point, float width, float height)
 	: AbstractFigure(), m_center(point), m_width(width), m_height(height)
 {

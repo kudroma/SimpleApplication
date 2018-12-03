@@ -15,6 +15,9 @@ namespace SimpleApplication
 	class Circle : public AbstractFigure
 	{
 	public:
+		//! Default constructor.
+		Circle();
+
 		Circle(Point2d circleCenter, float radius);
 
 		~Circle();

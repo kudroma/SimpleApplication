@@ -16,6 +16,7 @@ namespace SimpleApplication
 	class Ellipse : public  AbstractFigure
 	{
 	public:
+		//! Default constructor.
 		Ellipse();
 
 		//! Constructs ellipse from coordinates of the center, semi-axis and second semi-axis.

@@ -6,10 +6,7 @@
 
 namespace SimpleApplication
 {
-	/*! 
-		The class represents a factory for creating shapes.
-		The number of parameters must exactly match the number of arguments that go to the constructor of the corresponding class.
-	*/
+	//! The class represents a factory for creating shapes.
 	class FigureFactory
 	{
 	public:
@@ -29,6 +26,6 @@ namespace SimpleApplication
 		};
 
 		//! Creates a specific object of the shape and returns it.
-		static std::shared_ptr<AbstractFigure> create(Figure figure, ...);
+		static std::shared_ptr<AbstractFigure> create(Figure figure);
 	};
 }

@@ -6,11 +6,13 @@
 
 using namespace SimpleApplication;
 
-SimpleApplication::Ellipse::Ellipse()
+Ellipse::Ellipse()
 {
+	m_name = "Ellipse";
+
 }
 
-SimpleApplication::Ellipse::Ellipse(const Point2d & center, float a, float b)
+Ellipse::Ellipse(const Point2d & center, float a, float b)
 	: AbstractFigure(), m_center(center), m_a(a), m_b(b) // angle in degrees 
 {
 	m_name = "Ellipse";
@@ -26,23 +28,23 @@ SimpleApplication::Ellipse::Ellipse(const Point2d & center, float a, float b)
 	}
 }
 
-SimpleApplication::Ellipse::~Ellipse()
+Ellipse::~Ellipse()
 {
 }
 
-float SimpleApplication::Ellipse::perimeter() const
+float Ellipse::perimeter() const
 {
 	return 4 * (static_cast<float>(M_PI) * m_a * m_b + m_a - m_b) / (m_a + m_b);
 }
 
-float SimpleApplication::Ellipse::area() const
+float Ellipse::area() const
 {
 
 	return m_a * m_b * static_cast<float>(M_PI);
 }
-SimpleApplication::BoundingRect SimpleApplication::Ellipse::boundingBox() const
+BoundingRect Ellipse::boundingBox() const
 {
-	SimpleApplication::BoundingRect bRect;
+	BoundingRect bRect;
 	bRect.setCenter(m_center);
 	bRect.setWidth(m_a);
 	bRect.setHeight(m_b);

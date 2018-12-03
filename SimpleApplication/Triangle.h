@@ -8,6 +8,9 @@ namespace SimpleApplication
 	class Triangle : public AbstractFigure
 	{
 	public:
+		//! Default constructor.
+		Triangle();
+
 		//! The constructor creates a triangle the coordinates of the vertices.
 		Triangle(Point2d a, Point2d b, Point2d c);
 

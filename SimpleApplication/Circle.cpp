@@ -8,6 +8,12 @@
 
 using namespace SimpleApplication;
 
+Circle::Circle()
+{
+	m_name = "Circle";
+
+}
+
 Circle::Circle(Point2d circleCenter, float radius)
 	: AbstractFigure(), m_center(circleCenter), m_radius(radius)
 {
@@ -56,7 +62,7 @@ Point2d Circle::coordinatesPointAtAngle(float anglePointA, int indexAi) const
 	return pointTemp;
 }
 
-bool SimpleApplication::Circle::pointInside(const Point2d& point) const
+bool Circle::pointInside(const Point2d& point) const
 {
 	if (point.distanceToPoint(m_center) <= m_radius) return true;
 	else return false;

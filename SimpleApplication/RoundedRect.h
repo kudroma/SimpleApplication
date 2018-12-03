@@ -16,6 +16,7 @@ namespace SimpleApplication
 	class  RoundedRect : public AbstractFigure
 	{
 	public:
+		//! Default constructor.
 		RoundedRect();
 
 		//! Constructs  rounded rect from coordinates of center, width, height, radius.

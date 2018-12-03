@@ -15,8 +15,7 @@ using namespace GUI;
 Controller::Controller()
 {
 	m_widget = std::make_unique<Widget>(nullptr);
-	m_figure = std::make_shared<SimpleApplication::Triangle>(SimpleApplication::Point2d(2,4),
-		SimpleApplication::Point2d(3,5), SimpleApplication::Point2d(7,9));
+	m_figure = std::make_shared<SimpleApplication::Triangle>();
 	m_builder = std::make_unique<PathBuilder>();
     createFigure("Rectangle");
 }
@@ -49,41 +48,29 @@ void Controller::createFigure(const QString& text)
 {
 	if (text == "Rectangle")
 	{
-		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Rectangle,
-			3, SimpleApplication::Point2d(5,7), 4, 8);
-		loadFigure(m_figure);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Rectangle);
 	}
 	if (text == "Triangle")
 	{
-		auto triangle = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Triangle,
-			3, SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3));
-		loadFigure(triangle);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Triangle);
 	}
 	if (text == "Trapeze")
 	{
-		auto trapeze = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Trapeze,
-			4, SimpleApplication::Point2d(2, 6), SimpleApplication::Point2d(4, 9), SimpleApplication::Point2d(6, 3),
-			SimpleApplication::Point2d(7, 1));
-		loadFigure(trapeze);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Trapeze);
 	}
 	if (text == "Circle")
 	{
-		auto circle = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Circle,
-			2, SimpleApplication::Point2d(4, 7), 5);
-		loadFigure(circle);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Circle);
 	}
 	if (text == "Ellipse")
 	{
-		auto ellipse = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Ellipse,
-			3, SimpleApplication::Point2d(3, 6), 4, 8);
-		loadFigure(ellipse);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::Ellipse);
 	}
 	if (text == "RoundedRect")
 	{
-		auto roundedRect = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::RoundedRect,
-			4, SimpleApplication::Point2d(2, 6), 3, 5, 7);
-		loadFigure(roundedRect);
+		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::RoundedRect);
 	}
+	loadFigure(m_figure);
 }
 
 void Controller::loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure)

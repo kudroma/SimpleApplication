@@ -64,11 +64,11 @@ namespace GUI
 
 	private:
 
-		void loadCircle(const SimpleApplication::Circle&circle);
-		void loadTriangle(const SimpleApplication::Triangle&triangle);
-		void loadRectangle(const SimpleApplication::Rectangle&rectangle);
-		void loadEllipse(const SimpleApplication::Ellipse&ellipse);
-		void loadRoundedRect(const SimpleApplication::RoundedRect&roundedRect);
+		void loadCircle(const SimpleApplication::Circle& circle);
+		void loadTriangle(const SimpleApplication::Triangle& triangle);
+		void loadRectangle(const SimpleApplication::Rectangle& rectangle);
+		void loadEllipse(const SimpleApplication::Ellipse& ellipse);
+		void loadRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
 	
 	private:
 		//! View figure.

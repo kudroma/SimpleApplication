@@ -8,6 +8,9 @@ namespace SimpleApplication
 	class Trapeze : public AbstractFigure
 	{
 	public:
+		//! Default constructor.
+		Trapeze();
+
 		//! The constructor creates a trapeze the coordinates of the vertices.
 		Trapeze(Point2d a, Point2d b, Point2d c, Point2d d);
 

@@ -16,6 +16,7 @@ namespace SimpleApplication
 	class BoundingRect
 	{
 	public:
+		//! Default constructor.
 		BoundingRect();
 
 		//! Constructs bounding rect from coordinates of center (m_center), \c width and \c height.

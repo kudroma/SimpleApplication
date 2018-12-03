@@ -14,7 +14,7 @@ namespace SimpleApplication
 	class AbstractFigure
 	{
 	public:
-		//! Constructor.
+		//! Default constructor.
 		AbstractFigure();
 
 		~AbstractFigure();

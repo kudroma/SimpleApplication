@@ -8,6 +8,9 @@ namespace SimpleApplication
 	class Rectangle : public AbstractFigure
 	{
 	public:
+		//! Default constructor.
+		Rectangle();
+
 		//! The constructor creates a rectangle by the coordinates of the center, width and height.
 		Rectangle(Point2d point, float width, float height);
 
