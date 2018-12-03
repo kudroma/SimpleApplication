@@ -17,7 +17,7 @@ Controller::Controller()
 	m_widget = std::make_unique<Widget>(nullptr);
 	m_figure = std::make_shared<SimpleApplication::Triangle>();
 	m_builder = std::make_unique<PathBuilder>();
-    createFigure("Rectangle");
+    m_widget->show();
 }
 
 Controller::~Controller()

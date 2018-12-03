@@ -1,5 +1,6 @@
 #include "Widget.h"
 #include <qcolordialog.h>
+#include <QGraphicsItem>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -162,8 +163,10 @@ void Widget::setTextLineEdit6(const QString & text)
 void Widget::render(const QPainterPath& path)
 {
 	auto scene = new QGraphicsScene();
-	scene->addPath(path);
+	auto item = static_cast<QGraphicsItem*>(scene->addPath(path));
 	ui->graphicsView->setScene(scene);
+	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
+		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2);
 }
 
 QString Widget::textLineEdit6() const
