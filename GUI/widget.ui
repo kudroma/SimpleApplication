@@ -567,7 +567,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_9">
+            <widget class="QLabel" name="labelAreaValue">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -627,7 +627,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_10">
+            <widget class="QLabel" name="labelPerimeterValue">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>

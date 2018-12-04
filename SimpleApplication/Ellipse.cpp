@@ -9,7 +9,7 @@ using namespace SimpleApplication;
 Ellipse::Ellipse()
 {
 	m_name = "Ellipse";
-
+    
 }
 
 Ellipse::Ellipse(const Point2d & center, float a, float b)
