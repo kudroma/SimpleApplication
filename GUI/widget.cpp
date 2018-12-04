@@ -113,11 +113,6 @@ void Widget::setTextLineEdit1(const QString & text)
 	
 }
 
-QString Widget::textLineEdit1() const
-{
-	return ui->lineEdit_1->text();
-}
-
 QString Widget::textLineEdit2() const
 {
 	return ui->lineEdit_2->text();
@@ -306,5 +301,12 @@ void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 // Parameter for the trapeze.
 void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
 {
-
+	setTextLabel1("the x coordinate of point A");
+	setTextLabel2("the y coordinate of point A");
+	setTextLabel3("the x coordinate of point B");
+	setTextLabel4("the y coordinate of point B");
+	setTextLabel5("the x coordinate of point C");
+	setTextLabel6("the y coordinate of point C");
+	setTextLabel7("the x coordinate of point D");
+	setTextLabel8("the y coordinate of point D");
 }

@@ -153,11 +153,22 @@ public slots:
 	//! Hides and shows the lineEdit_8
 	void setVisiblelineEdit_8(bool visible);
 
+	//! Brings the interface elements in line with the properties of the triangle.
 	void showTriangle(const SimpleApplication::Triangle& triangle);
+
+	//! Brings the interface elements in line with the properties of the rectangle.
 	void showRectangle(const SimpleApplication::Rectangle& rectangle);
+
+	//! Brings the interface elements in line with the properties of the trapeze.
 	void showTrapeze(const SimpleApplication::Trapeze& trapeze);
+
+	//! Brings the interface elements in line with the properties of the circle.
 	void showCircle(const SimpleApplication::Circle& circle);
+
+	//! Brings the interface elements in line with the properties of the ellipse.
 	void showEllipse(const SimpleApplication::Ellipse& ellipse);
+
+	//! Brings the interface elements in line with the properties of the roundedRect.
 	void showRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
 
 signals:
