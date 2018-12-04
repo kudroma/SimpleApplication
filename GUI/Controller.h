@@ -70,6 +70,7 @@ namespace GUI
 		void loadRectangle(const SimpleApplication::Rectangle& rectangle);
 		void loadEllipse(const SimpleApplication::Ellipse& ellipse);
 		void loadRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
+        void loadTrapeze(const SimpleApplication::Trapeze & trapeze);
 	
 	private:
 		//! View figure.

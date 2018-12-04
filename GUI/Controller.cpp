@@ -88,7 +88,7 @@ void Controller::loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> f
 	
 	if (figure->name() == "RoundedRect") Controller::loadRoundedRect(*std::static_pointer_cast<SimpleApplication::RoundedRect>(figure));
 	
-	//if (figure->name() == "Trapeze") Controller::loadTrapeze(*std::static_pointer_cast<SimpleApplication::Trapeze>(figure));
+	if (figure->name() == "Trapeze") Controller::loadTrapeze(*std::static_pointer_cast<SimpleApplication::Trapeze>(figure));
 }
 
 void GUI::Controller::loadCircle(const SimpleApplication::Circle & circle)
