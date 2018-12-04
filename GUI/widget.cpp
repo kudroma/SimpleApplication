@@ -193,6 +193,10 @@ QString Widget::textLineEdit8() const
 	return ui->lineEdit_8->text();
 }
 
+void Widget::updateFigure()
+{
+}
+
 void Widget::setFigureColor()
 {
 	m_color = QColorDialog::getColor();

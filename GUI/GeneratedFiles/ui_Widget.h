@@ -68,9 +68,8 @@ public:
     QLabel *label_Perimeter;
     QLabel *label_10;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
     QPushButton *pushButtonColor;
-    QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButtonUpdateFigure;
     QSpacerItem *verticalSpacer;
     QGraphicsView *graphicsView;
 
@@ -78,7 +77,7 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(777, 539);
+        Widget->resize(770, 529);
         horizontalLayout_3 = new QHBoxLayout(Widget);
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -396,10 +395,6 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
         pushButtonColor = new QPushButton(Widget);
         pushButtonColor->setObjectName(QStringLiteral("pushButtonColor"));
         sizePolicy.setHeightForWidth(pushButtonColor->sizePolicy().hasHeightForWidth());
@@ -407,9 +402,12 @@ public:
 
         horizontalLayout->addWidget(pushButtonColor);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        pushButtonUpdateFigure = new QPushButton(Widget);
+        pushButtonUpdateFigure->setObjectName(QStringLiteral("pushButtonUpdateFigure"));
+        sizePolicy.setHeightForWidth(pushButtonUpdateFigure->sizePolicy().hasHeightForWidth());
+        pushButtonUpdateFigure->setSizePolicy(sizePolicy);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        horizontalLayout->addWidget(pushButtonUpdateFigure);
 
 
         verticalLayout_12->addLayout(horizontalLayout);
@@ -456,6 +454,7 @@ public:
         label_Perimeter->setText(QApplication::translate("Widget", "Perimeter", nullptr));
         label_10->setText(QString());
         pushButtonColor->setText(QApplication::translate("Widget", "Color", nullptr));
+        pushButtonUpdateFigure->setText(QApplication::translate("Widget", "Update Figure", nullptr));
     } // retranslateUi
 
 };

@@ -124,6 +124,9 @@ public:
 	//! Returns text from lineEdit_8.
 	QString textLineEdit8() const;
 
+	//! Sets text to updateFigure.
+	void updateFigure();
+
 public slots:
 
 	//! Sets color of the figure.
