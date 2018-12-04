@@ -13,13 +13,10 @@ PathBuilder::~PathBuilder()
 QPainterPath PathBuilder::drawLines() const
 {
 	auto painterPath = new QPainterPath();
-	
 	auto points = m_figure->points();
-	
 	painterPath->moveTo(convert(points[0]));
-
 	for (auto i = 1; i < points.size(); i++) painterPath->lineTo(convert(points[i]));
-	
+	painterPath->lineTo(convert(points[0]));
 	return *painterPath;
 }
 
