@@ -160,6 +160,9 @@ public slots:
 	void showEllipse(const SimpleApplication::Ellipse& ellipse);
 	void showRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
 
+signals:
+	void comboBoxItemSelected(const QString& text);
+
 private:
 	QColor m_color;
 

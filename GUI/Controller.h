@@ -5,6 +5,7 @@
 #include <qwidget.h>
 #include "Widget.h"
 #include "PathBuilder.h"
+#include <QObject>
 
 #include "SimpleApplication/Triangle.h"
 #include "SimpleApplication/Rectangle.h"
@@ -17,7 +18,7 @@
 namespace GUI
 {
 	//! Class connecting GUI and SimpleApplication.
-	class Controller
+	class Controller : public QObject
 	{
 	public:
 		//! Constructor.

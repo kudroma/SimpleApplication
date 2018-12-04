@@ -12,12 +12,14 @@
 
 using namespace GUI;
 
-Controller::Controller()
+Controller::Controller() : QObject()
 {
 	m_widget = std::make_unique<Widget>(nullptr);
 	m_figure = std::make_shared<SimpleApplication::Triangle>();
 	m_builder = std::make_unique<PathBuilder>();
     m_widget->show();
+
+	Widget::connect(m_widget.get(), &Widget::comboBoxItemSelected, this, &Controller::createFigure);
 }
 
 Controller::~Controller()
@@ -71,6 +73,7 @@ void Controller::createFigure(const QString& text)
 		m_figure = SimpleApplication::FigureFactory::create(SimpleApplication::FigureFactory::Figure::RoundedRect);
 	}
 	loadFigure(m_figure);
+	Controller::drawFigure();
 }
 
 void Controller::loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure)

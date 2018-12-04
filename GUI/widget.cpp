@@ -1,6 +1,7 @@
 #include "Widget.h"
 #include <qcolordialog.h>
 #include <QGraphicsItem>
+#include <QComboBox>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -16,6 +17,9 @@ Widget::Widget(QWidget *parent) :
 	ui->comboBoxFigure->addItem(QString("RoundedRect"));
 
 	connect(ui->pushButtonColor, &QPushButton::clicked, this, &Widget::setFigureColor);
+
+	connect(ui->comboBoxFigure, QOverload<const QString &>::of(&QComboBox::currentIndexChanged),
+		this, &Widget::comboBoxItemSelected);
 }
 
 Widget::~Widget()
