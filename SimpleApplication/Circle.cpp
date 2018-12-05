@@ -10,8 +10,18 @@ using namespace SimpleApplication;
 
 Circle::Circle()
 {
-	m_name = "Circle";
+	m_center = Point2d(30, 29);
+	m_radius = 20;
 
+	m_name = "Circle";
+	int indexI = 0;
+
+	while (m_angle*indexI < 360)
+	{
+		auto point = coordinatesPointAtAngle(m_angle, indexI);
+		m_points.push_back(point);
+		indexI++;
+	}
 }
 
 Circle::Circle(Point2d circleCenter, float radius)
