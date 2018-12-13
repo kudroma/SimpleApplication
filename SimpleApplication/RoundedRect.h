@@ -9,7 +9,7 @@ namespace SimpleApplication
 	   /*!
 	  Rectangle has the following parameters:
 	   \li have angle radius;
-	   \li width of the rounded rect ;
+	   \li width of the rounded rect;
 	   \li height of the rounded rect.
 	   \li center of the rounded rect.
 	   */

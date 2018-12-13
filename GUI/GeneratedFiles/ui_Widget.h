@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Widget.ui'
 **
-** Created by: Qt User Interface Compiler version 5.10.1
+** Created by: Qt User Interface Compiler version 5.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,14 +10,11 @@
 #define UI_WIDGET_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -66,10 +63,10 @@ public:
     QLineEdit *lineEdit_8;
     QVBoxLayout *verticalLayout_8;
     QLabel *label_Area;
-    QLabel *labelAreaValue;
+    QLabel *label_AreaVal;
     QVBoxLayout *verticalLayout_7;
     QLabel *label_Perimeter;
-    QLabel *labelPerimeterValue;
+    QLabel *label_PerimeterVal;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButtonColor;
     QPushButton *pushButtonUpdateFigure;
@@ -345,22 +342,19 @@ public:
         verticalLayout_8->setSizeConstraint(QLayout::SetFixedSize);
         label_Area = new QLabel(Widget);
         label_Area->setObjectName(QStringLiteral("label_Area"));
-        sizePolicy.setHeightForWidth(label_Area->sizePolicy().hasHeightForWidth());
-        label_Area->setSizePolicy(sizePolicy);
-        label_Area->setMinimumSize(QSize(133, 0));
-        label_Area->setMaximumSize(QSize(133, 16777215));
         label_Area->setAlignment(Qt::AlignCenter);
 
         verticalLayout_8->addWidget(label_Area);
 
-        labelAreaValue = new QLabel(Widget);
-        labelAreaValue->setObjectName(QStringLiteral("labelAreaValue"));
-        sizePolicy.setHeightForWidth(labelAreaValue->sizePolicy().hasHeightForWidth());
-        labelAreaValue->setSizePolicy(sizePolicy);
-        labelAreaValue->setMinimumSize(QSize(133, 0));
-        labelAreaValue->setMaximumSize(QSize(133, 16777215));
+        label_AreaVal = new QLabel(Widget);
+        label_AreaVal->setObjectName(QStringLiteral("label_AreaVal"));
+        sizePolicy.setHeightForWidth(label_AreaVal->sizePolicy().hasHeightForWidth());
+        label_AreaVal->setSizePolicy(sizePolicy);
+        label_AreaVal->setMinimumSize(QSize(133, 0));
+        label_AreaVal->setMaximumSize(QSize(133, 16777215));
+        label_AreaVal->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_8->addWidget(labelAreaValue);
+        verticalLayout_8->addWidget(label_AreaVal);
 
 
         gridLayout->addLayout(verticalLayout_8, 4, 0, 1, 1);
@@ -379,14 +373,11 @@ public:
 
         verticalLayout_7->addWidget(label_Perimeter);
 
-        labelPerimeterValue = new QLabel(Widget);
-        labelPerimeterValue->setObjectName(QStringLiteral("labelPerimeterValue"));
-        sizePolicy.setHeightForWidth(labelPerimeterValue->sizePolicy().hasHeightForWidth());
-        labelPerimeterValue->setSizePolicy(sizePolicy);
-        labelPerimeterValue->setMinimumSize(QSize(133, 0));
-        labelPerimeterValue->setMaximumSize(QSize(133, 16777215));
+        label_PerimeterVal = new QLabel(Widget);
+        label_PerimeterVal->setObjectName(QStringLiteral("label_PerimeterVal"));
+        label_PerimeterVal->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_7->addWidget(labelPerimeterValue);
+        verticalLayout_7->addWidget(label_PerimeterVal);
 
 
         gridLayout->addLayout(verticalLayout_7, 4, 1, 1, 1);
@@ -453,9 +444,9 @@ public:
         label_7->setText(QApplication::translate("Widget", "lineEdit_7", nullptr));
         label_8->setText(QApplication::translate("Widget", "lineEdit_8", nullptr));
         label_Area->setText(QApplication::translate("Widget", "Area", nullptr));
-        labelAreaValue->setText(QString());
+        label_AreaVal->setText(QApplication::translate("Widget", "0", nullptr));
         label_Perimeter->setText(QApplication::translate("Widget", "Perimeter", nullptr));
-        labelPerimeterValue->setText(QString());
+        label_PerimeterVal->setText(QApplication::translate("Widget", "0", nullptr));
         pushButtonColor->setText(QApplication::translate("Widget", "Color", nullptr));
         pushButtonUpdateFigure->setText(QApplication::translate("Widget", "Update Figure", nullptr));
     } // retranslateUi

@@ -64,12 +64,22 @@ namespace GUI
 		void createFigure(const QString& text);
 
 	private:
-
+		//! Loads the circle into the user interface.
 		void loadCircle(const SimpleApplication::Circle& circle);
+
+		//! Loads the triangle into the user interface.
 		void loadTriangle(const SimpleApplication::Triangle& triangle);
+
+		//! Loads the rectangle into the user interface.
 		void loadRectangle(const SimpleApplication::Rectangle& rectangle);
+
+		//! Loads the ellipse into the user interface.
 		void loadEllipse(const SimpleApplication::Ellipse& ellipse);
+
+		//! Loads the roundedRect into the user interface.
 		void loadRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
+
+		//! Loads the trapeze into the user interface.
         void loadTrapeze(const SimpleApplication::Trapeze & trapeze);
 	
 	private:

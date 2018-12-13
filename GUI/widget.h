@@ -16,11 +16,14 @@ namespace Ui {
     class Widget;
 }
 
+//! The class represents a for drawing shapes and interface.
 class Widget : public QWidget
 {
     Q_OBJECT
 
 public:
+
+	//! Constructor.
     explicit Widget(QWidget *parent = nullptr);
 
     ~Widget();
@@ -48,7 +51,13 @@ public:
 
 	//! Sets text to label_8.
 	void setTextLabel8(const QString& text);
-	
+
+	//! Sets text to label_Area.
+	void setTextLabelArea(const QString& text);
+
+	//! Sets text to label_Perimeter.
+	void setTextLabelPerimeter(const QString& text);
+
 	//! Hides and shows the label_1.
 	void setVisibleLabel1(bool visible);
 
@@ -72,7 +81,13 @@ public:
 
 	//! Hides and shows the label_8.
 	void setVisibleLabel8(bool visible);
-	
+
+	//! Hides and show the labelArea.
+	void setVisibleLabelAreaVal(bool visible);
+
+	//! Hides and show the labelPerimeter.
+	void setVisibleLabelPerimeterVal(bool visible);
+
 	//! Sets text to lineEdit_1.
     void setTextLineEdit1(const QString& text);
 
@@ -112,17 +127,23 @@ public:
 	//! Sets text to lineEdit_7.
 	void setTextLineEdit7(const QString& text);
 
-	//! Returns text from lineEdit_7.
+	//! Returns text  from lineEdit_7.
 	QString textLineEdit7() const;
 
 	//! Sets text to lineEdit_8.
 	void setTextLineEdit8(const QString& text);
 
+	//! Returns text  from lineEdit_8.
+	QString textLineEdit8() const;
+
+	//! Sets text to lineEdit_Area.
+	void setTextLineEditArea(const QString& text);
+
+	//! Returns text from lineEdit_Area.
+	QString textLineEditArea() const;
+
 	//! Renders QPainterPath.
 	void render(const QPainterPath& path);
-
-	//! Returns text from lineEdit_8.
-	QString textLineEdit8() const;
 
 	//! Sets text to updateFigure.
 	void updateFigure();
@@ -175,10 +196,13 @@ public slots:
 	void showRoundedRect(const SimpleApplication::RoundedRect& roundedRect);
 
 signals:
+	//! Select the shape element.
 	void comboBoxItemSelected(const QString& text);
 
 private:
+	//! Color figure.
 	QColor m_color;
 
+	//! View color.
 	Ui::Widget *ui;
 };

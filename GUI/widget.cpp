@@ -67,6 +67,16 @@ void Widget::setTextLabel8(const QString & text)
 	ui->label_8->setText(text);
 }
 
+void Widget::setTextLabelArea(const QString & text)
+{
+	ui->label_AreaVal->setText(text);
+}
+
+void Widget::setTextLabelPerimeter(const QString & text)
+{
+	ui->label_PerimeterVal->setText(text);
+}
+
 void Widget::setVisibleLabel1(bool visible)
 {
 	ui->label_1->setVisible(visible);
@@ -107,10 +117,19 @@ void Widget::setVisibleLabel8(bool visible)
 	ui->label_8->setVisible(visible);
 }
 
+void Widget::setVisibleLabelAreaVal(bool visible)
+{
+	ui->label_AreaVal->setVisible(visible);
+}
+
+void Widget::setVisibleLabelPerimeterVal(bool visible)
+{
+	ui->label_PerimeterVal->setVisible(visible);
+}
+
 void Widget::setTextLineEdit1(const QString & text)
 {
     ui->lineEdit_1->setText(text);
-	
 }
 
 QString Widget::textLineEdit2() const
@@ -141,7 +160,6 @@ QString Widget::textLineEdit4() const
 void Widget::setTextLineEdit4(const QString & text)
 {
 	ui->lineEdit_4->setText(text);
-
 }
 
 void Widget::setTextLineEdit5(const QString & text)
@@ -246,7 +264,12 @@ void Widget::setVisiblelineEdit_8(bool visible)
 void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 {
 	setVisiblelineEdit_6(false);
-	
+	setVisibleLabel6(false);
+	setVisiblelineEdit_7(false);
+	setVisibleLabel7(false);
+	setVisiblelineEdit_8(false);
+	setVisibleLabel8(false);
+
 	setTextLabel1("center x");
 	setTextLabel2("center y");
 	setTextLabel3("length of side ab");
@@ -258,7 +281,13 @@ void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 {
 	setVisiblelineEdit_5(false);
+	setVisibleLabel5(false);
 	setVisiblelineEdit_6(false);
+	setVisibleLabel6(false);
+	setVisiblelineEdit_7(false);
+	setVisibleLabel7(false);
+	setVisiblelineEdit_8(false);
+	setVisibleLabel8(false);
 
 	setTextLabel1("center x");
 	setTextLabel2("center y");
@@ -270,8 +299,15 @@ void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 void Widget::showCircle(const SimpleApplication::Circle & circle)
 {
 	setVisiblelineEdit_4(false);
+	setVisibleLabel4(false);
 	setVisiblelineEdit_5(false);
+	setVisibleLabel5(false);
 	setVisiblelineEdit_6(false);
+	setVisibleLabel6(false);
+	setVisiblelineEdit_7(false);
+	setVisibleLabel7(false);
+	setVisiblelineEdit_8(false);
+	setVisibleLabel8(false);
 
 	setTextLabel1("center x");
 	setTextLabel2("center y");
@@ -282,7 +318,13 @@ void Widget::showCircle(const SimpleApplication::Circle & circle)
 void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 {
 	setVisiblelineEdit_5(false);
+	setVisibleLabel5(false);
 	setVisiblelineEdit_6(false);
+	setVisibleLabel6(false);
+	setVisiblelineEdit_7(false);
+	setVisibleLabel7(false);
+	setVisiblelineEdit_8(false);
+	setVisibleLabel8(false);
 
 	setTextLabel1("center x");
 	setTextLabel2("center y");
@@ -294,6 +336,11 @@ void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 {
 	setVisiblelineEdit_6(false);
+	setVisibleLabel6(false);
+	setVisiblelineEdit_7(false);
+	setVisibleLabel7(false);
+	setVisiblelineEdit_8(false);
+	setVisibleLabel8(false);
 
 	setTextLabel1("center x");
 	setTextLabel2("center y");
@@ -305,12 +352,12 @@ void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 // Parameter for the trapeze.
 void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
 {
-	setTextLabel1("the x coordinate of point A");
-	setTextLabel2("the y coordinate of point A");
-	setTextLabel3("the x coordinate of point B");
-	setTextLabel4("the y coordinate of point B");
-	setTextLabel5("the x coordinate of point C");
-	setTextLabel6("the y coordinate of point C");
-	setTextLabel7("the x coordinate of point D");
-	setTextLabel8("the y coordinate of point D");
+	setTextLabel1("coord A(x)");
+	setTextLabel2("coord A(y)");
+	setTextLabel3("coord B(x)");
+	setTextLabel4("coord B(y)");
+	setTextLabel5("coord C(x)");
+	setTextLabel6("coord C(y)");
+	setTextLabel7("coord D(x)");
+	setTextLabel8("coord D(y)");
 }
