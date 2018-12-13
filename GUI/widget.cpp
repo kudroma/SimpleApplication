@@ -263,6 +263,16 @@ void Widget::setVisiblelineEdit_8(bool visible)
 // Parameter for the triangle.
 void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
+	setVisiblelineEdit_4(true);
+	setVisibleLabel4(true);
+	setVisiblelineEdit_5(true);
+	setVisibleLabel5(true);
 	setVisiblelineEdit_6(false);
 	setVisibleLabel6(false);
 	setVisiblelineEdit_7(false);
@@ -280,6 +290,14 @@ void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 // Parameter for the rectangle.
 void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
+	setVisiblelineEdit_4(true);
+	setVisibleLabel4(true);
 	setVisiblelineEdit_5(false);
 	setVisibleLabel5(false);
 	setVisiblelineEdit_6(false);
@@ -298,6 +316,12 @@ void Widget::showRectangle(const SimpleApplication::Rectangle & rectangle)
 // Parameter for the circle.
 void Widget::showCircle(const SimpleApplication::Circle & circle)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
 	setVisiblelineEdit_4(false);
 	setVisibleLabel4(false);
 	setVisiblelineEdit_5(false);
@@ -317,6 +341,14 @@ void Widget::showCircle(const SimpleApplication::Circle & circle)
 // Parameter for the ellipse.
 void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
+	setVisiblelineEdit_4(true);
+	setVisibleLabel4(true);
 	setVisiblelineEdit_5(false);
 	setVisibleLabel5(false);
 	setVisiblelineEdit_6(false);
@@ -335,6 +367,16 @@ void Widget::showEllipse(const SimpleApplication::Ellipse & ellipse)
 // Parameter for the roundedRect.
 void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
+	setVisiblelineEdit_4(true);
+	setVisibleLabel4(true);
+	setVisiblelineEdit_5(true);
+	setVisibleLabel5(true);
 	setVisiblelineEdit_6(false);
 	setVisibleLabel6(false);
 	setVisiblelineEdit_7(false);
@@ -352,6 +394,23 @@ void Widget::showRoundedRect(const SimpleApplication::RoundedRect & roundedRect)
 // Parameter for the trapeze.
 void Widget::showTrapeze(const SimpleApplication::Trapeze & trapeze)
 {
+	setVisiblelineEdit_1(true);
+	setVisibleLabel1(true);
+	setVisiblelineEdit_2(true);
+	setVisibleLabel2(true);
+	setVisiblelineEdit_3(true);
+	setVisibleLabel3(true);
+	setVisiblelineEdit_4(true);
+	setVisibleLabel4(true);
+	setVisiblelineEdit_5(true);
+	setVisibleLabel5(true);
+	setVisiblelineEdit_6(true);
+	setVisibleLabel6(true);
+	setVisiblelineEdit_7(true);
+	setVisibleLabel7(true);
+	setVisiblelineEdit_8(true);
+	setVisibleLabel8(true);
+
 	setTextLabel1("coord A(x)");
 	setTextLabel2("coord A(y)");
 	setTextLabel3("coord B(x)");
