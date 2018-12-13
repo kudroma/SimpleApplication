@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include <QString>
+#include <QPainterPath>
 #include "ui_Widget.h"
 
 #include "SimpleApplication/Triangle.h"
@@ -181,4 +182,6 @@ private:
 	QColor m_color;
 
 	Ui::Widget *ui;
+
+	QPainterPath m_path;
 };

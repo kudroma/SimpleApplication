@@ -22,7 +22,7 @@ Widget::Widget(QWidget *parent) :
 		this, &Widget::comboBoxItemSelected);
 
 	connect(ui->pushButtonUpdateFigure, &QPushButton::clicked,
-		this, &Widget::UpdateFigure);
+		this, &Widget::updateFigure);
 }
 
 Widget::~Widget()
@@ -164,6 +164,7 @@ void Widget::setTextLineEdit6(const QString & text)
 
 void Widget::render(const QPainterPath& path)
 {
+	m_path = path;
 	auto scene = new QGraphicsScene();
 	QPen pen;
 	pen.setWidthF(0.1);
@@ -209,6 +210,7 @@ void Widget::updateFigure()
 void Widget::setFigureColor()
 {
 	m_color = QColorDialog::getColor();
+	render(m_path);
 }
 
 void Widget::setVisiblelineEdit_1(bool visible)
