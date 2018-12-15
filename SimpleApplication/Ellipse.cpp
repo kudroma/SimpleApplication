@@ -8,8 +8,21 @@ using namespace SimpleApplication;
 
 Ellipse::Ellipse()
 {
+	m_center = Point2d(20, 21);
+	m_a = 10;
+	m_b = 5;
+
 	m_name = "Ellipse";
-    
+	int indexI = 0;
+
+	const auto angle = M_PI / 20;
+
+	while (angle * indexI < M_PI * 2)
+	{
+		auto point = pointInArc(m_angle, indexI);
+		m_points.push_back(point);
+		indexI++;
+	}
 }
 
 Ellipse::Ellipse(const Point2d & center, float a, float b)

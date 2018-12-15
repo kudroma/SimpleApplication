@@ -6,7 +6,7 @@ Trapeze::Trapeze()
 {
 	m_name = "Trapeze";
 	m_points.reserve(4);
-	m_points.push_back(Point2d(10, 10));
+	m_points.push_back(Point2d(11, 10));
 	m_points.push_back(Point2d(5, 10));
 	m_points.push_back(Point2d(6, 3));
 	m_points.push_back(Point2d(8, 3));

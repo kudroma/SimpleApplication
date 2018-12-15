@@ -6,8 +6,8 @@ Triangle::Triangle()
 {
 	m_name = "Triangle";
 	m_points.reserve(3);
-	m_points.push_back(Point2d(15, 15));
-	m_points.push_back(Point2d(7, 15));
+	m_points.push_back(Point2d(15, 14));
+	m_points.push_back(Point2d(7, 16));
 	m_points.push_back(Point2d(10, 4));
 }
 
