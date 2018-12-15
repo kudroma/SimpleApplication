@@ -20,6 +20,9 @@ Widget::Widget(QWidget *parent) :
 
 	connect(ui->comboBoxFigure, QOverload<const QString &>::of(&QComboBox::currentIndexChanged),
 		this, &Widget::comboBoxItemSelected);
+
+	connect(ui->pushButtonUpdateFigure, &QPushButton::clicked,
+		this, &Widget::updateFigure);
 }
 
 Widget::~Widget()
@@ -179,8 +182,15 @@ void Widget::setTextLineEdit6(const QString & text)
 
 void Widget::render(const QPainterPath& path)
 {
+	m_path = path;
 	auto scene = new QGraphicsScene();
-	auto item = static_cast<QGraphicsItem*>(scene->addPath(path));
+	QPen pen;
+	pen.setWidthF(0.1);
+	pen.setColor(m_color);
+	QBrush brush;
+	brush.setColor(m_color);
+	brush.setStyle(Qt::BrushStyle::SolidPattern);
+	auto item = static_cast<QGraphicsItem*>(scene->addPath(path, pen, brush));
 	ui->graphicsView->setScene(scene);
 	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
 		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2);
@@ -218,6 +228,7 @@ void Widget::updateFigure()
 void Widget::setFigureColor()
 {
 	m_color = QColorDialog::getColor();
+	render(m_path);
 }
 
 void Widget::setVisiblelineEdit_1(bool visible)
