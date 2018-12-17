@@ -81,6 +81,9 @@ namespace GUI
 
 		//! Loads the trapeze into the user interface.
         void loadTrapeze(const SimpleApplication::Trapeze & trapeze);
+
+        //! Updates circle on the screen.
+        void updateCircle();
 	
 	private:
 		//! View figure.

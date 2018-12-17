@@ -155,3 +155,14 @@ void GUI::Controller::loadTrapeze(const SimpleApplication::Trapeze & trapeze)
 	m_widget->setTextLineEdit7(QString("%1").arg(trapeze.d().x()));
 	m_widget->setTextLineEdit8(QString("%1").arg(trapeze.d().y()));
 }
+
+void GUI::Controller::updateCircle()
+{
+    using namespace SimpleApplication;
+
+    auto centerX = m_widget->textLineEdit1().toFloat();
+    auto centerY = m_widget->textLineEdit2().toFloat();
+    auto r = m_widget->textLineEdit3().toFloat();
+
+    m_figure = std::make_shared<Circle>(Point2d(centerX, centerY), r);
+}
