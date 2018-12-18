@@ -85,6 +85,9 @@ namespace GUI
         //! Updates circle on the screen.
         void updateCircle();
 	
+		//! Updates triangle on the screen.
+		void updateTriangle();
+
 	private:
 		//! View figure.
 		QWidget* m_view;

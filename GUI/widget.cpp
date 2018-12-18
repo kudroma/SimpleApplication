@@ -289,18 +289,19 @@ void Widget::showTriangle(const SimpleApplication::Triangle & triangle)
 	setVisibleLabel4(true);
 	setVisiblelineEdit_5(true);
 	setVisibleLabel5(true);
-	setVisiblelineEdit_6(false);
-	setVisibleLabel6(false);
+	setVisiblelineEdit_6(true);
+	setVisibleLabel6(true);
 	setVisiblelineEdit_7(false);
 	setVisibleLabel7(false);
 	setVisiblelineEdit_8(false);
 	setVisibleLabel8(false);
 
-	setTextLabel1("center x");
-	setTextLabel2("center y");
-	setTextLabel3("length of side ab");
-	setTextLabel4("length of side bc");
-	setTextLabel5("length of side ca");
+	setTextLabel1("coord A(x)");
+	setTextLabel2("coord A(y)");
+	setTextLabel3("coord B(x)");
+	setTextLabel4("coord B(y)");
+	setTextLabel5("coord C(x)");
+	setTextLabel6("coord C(y)");
 }
 
 // Parameter for the rectangle.
