@@ -85,6 +85,21 @@ namespace GUI
         //! Updates circle on the screen.
         void updateCircle();
 	
+		//! Updates triangle on the screen.
+		void updateTriangle();
+
+		//! Updates rectangle on the screen.
+		void updateRectangle();
+
+		//! Updates ellipse on the screen.
+		void updateEllipse();
+
+		//! Updates roundedRect on the screen.
+		void updateRoundedRect();
+
+		//! Updates trapeze on the screen.
+		void updateTrapeze();
+
 	private:
 		//! View figure.
 		QWidget* m_view;
