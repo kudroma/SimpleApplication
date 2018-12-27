@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Widget.ui'
 **
-** Created by: Qt User Interface Compiler version 5.10.1
+** Created by: Qt User Interface Compiler version 5.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,14 +10,11 @@
 #define UI_WIDGET_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -30,7 +27,8 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_4;
+    QVBoxLayout *verticalLayout_14;
     QVBoxLayout *verticalLayout_13;
     QVBoxLayout *verticalLayout_12;
     QVBoxLayout *verticalLayout_9;
@@ -73,6 +71,10 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButtonColor;
     QPushButton *pushButtonUpdateFigure;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label_Point;
+    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer;
     QGraphicsView *graphicsView;
 
@@ -80,15 +82,17 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(770, 529);
-        horizontalLayout_3 = new QHBoxLayout(Widget);
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        Widget->resize(611, 393);
+        horizontalLayout_4 = new QHBoxLayout(Widget);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        verticalLayout_14 = new QVBoxLayout();
+        verticalLayout_14->setSpacing(6);
+        verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
         verticalLayout_13 = new QVBoxLayout();
         verticalLayout_13->setSpacing(6);
         verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
-        verticalLayout_13->setSizeConstraint(QLayout::SetFixedSize);
         verticalLayout_12 = new QVBoxLayout();
         verticalLayout_12->setSpacing(6);
         verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
@@ -412,17 +416,41 @@ public:
 
         verticalLayout_13->addLayout(verticalLayout_12);
 
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        label_Point = new QLabel(Widget);
+        label_Point->setObjectName(QStringLiteral("label_Point"));
+        label_Point->setMinimumSize(QSize(133, 0));
+        label_Point->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_Point);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_2);
+
+
+        verticalLayout_13->addLayout(horizontalLayout_3);
+
+
+        verticalLayout_14->addLayout(verticalLayout_13);
+
         verticalSpacer = new QSpacerItem(20, 178, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_13->addItem(verticalSpacer);
+        verticalLayout_14->addItem(verticalSpacer);
 
 
-        horizontalLayout_3->addLayout(verticalLayout_13);
+        horizontalLayout_4->addLayout(verticalLayout_14);
 
         graphicsView = new QGraphicsView(Widget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
 
-        horizontalLayout_3->addWidget(graphicsView);
+        horizontalLayout_4->addWidget(graphicsView);
 
 
         retranslateUi(Widget);
@@ -452,6 +480,7 @@ public:
         label_PerimeterVal->setText(QApplication::translate("Widget", "0", nullptr));
         pushButtonColor->setText(QApplication::translate("Widget", "Color", nullptr));
         pushButtonUpdateFigure->setText(QApplication::translate("Widget", "Update Figure", nullptr));
+        label_Point->setText(QApplication::translate("Widget", "TextLabel", nullptr));
     } // retranslateUi
 
 };

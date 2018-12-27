@@ -2,6 +2,7 @@
 #include <qcolordialog.h>
 #include <QGraphicsItem>
 #include <QComboBox>
+#include <QMouseEvent>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -228,6 +229,14 @@ QString Widget::textLineEdit8() const
 
 void Widget::updateFigure()
 {
+}
+
+void Widget::mousePressEvent(QMouseEvent * event)
+{
+	if (ui->graphicsView->itemAt(event->x(), event->y()) == nullptr)
+		ui->label_Point->setText("Point outside the figure");
+	else ui->label_Point->setText("Point inside the figure");
+	QWidget::mousePressEvent(event);
 }
 
 void Widget::setFigureColor()

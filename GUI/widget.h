@@ -149,6 +149,9 @@ public:
 	//! Sets text to updateFigure.
 	void updateFigure();
 
+	//! Mouse Press Event.
+	void mousePressEvent(QMouseEvent* event) override;
+
 public slots:
 
 	//! Sets color of the figure.
