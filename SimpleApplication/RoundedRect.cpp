@@ -7,23 +7,24 @@ using namespace SimpleApplication;
 
 RoundedRect::RoundedRect()
 {
-	m_center = Point2d(23, 22);
-	m_width = 5;
-	m_height = 15;
-	m_radius = 6;
+	m_center = Point2d(15, 20);
+	m_width = 10;
+	m_height = 10;
+	m_radius = 1;
 
 	m_name = "RoundedRect";
 	m_points.reserve(8);
 	/*
-	m_points.push_back(Point2d(19, 10));
-	m_points.push_back(Point2d(6, 10));
-	m_points.push_back(Point2d(5, 9));
-	m_points.push_back(Point2d(5, 6));
-	m_points.push_back(Point2d(6, 5));
-	m_points.push_back(Point2d(19, 5));
-	m_points.push_back(Point2d(20, 6));
-	m_points.push_back(Point2d(20, 9));
+	m_points.push_back(Point2d(12, 10));
+	m_points.push_back(Point2d(7, 9));
+	m_points.push_back(Point2d(6, 9));
+	m_points.push_back(Point2d(6, 7));
+	m_points.push_back(Point2d(7, 6));
+	m_points.push_back(Point2d(10, 5));
+	m_points.push_back(Point2d(11, 7));
+	m_points.push_back(Point2d(14, 8));
 	*/
+
 	Point2d pointTemp;
 
 	// Coordinates point 1ts
