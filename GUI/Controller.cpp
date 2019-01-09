@@ -186,6 +186,58 @@ void GUI::Controller::updateCircle()
     m_figure = std::make_shared<Circle>(Point2d(centerX, centerY), r);
 }
 
+void GUI::Controller::updateRectangle()
+{
+	using namespace SimpleApplication;
+
+	auto centerX = m_widget->textLineEdit1().toFloat();
+	auto centerY = m_widget->textLineEdit2().toFloat();
+	auto w = m_widget->textLineEdit3().toFloat();
+	auto h = m_widget->textLineEdit4().toFloat();
+
+	m_figure = std::make_shared<Rectangle>(Point2d(centerX, centerY), w, h);
+}
+
+void GUI::Controller::updateEllipse()
+{
+	using namespace SimpleApplication;
+
+	auto centerX = m_widget->textLineEdit1().toFloat();
+	auto centerY = m_widget->textLineEdit2().toFloat();
+	auto s = m_widget->textLineEdit3().toFloat();
+	auto tss = m_widget->textLineEdit4().toFloat();
+
+	m_figure = std::make_shared<Ellipse>(Point2d(centerX, centerY), s, tss);
+}
+
+void GUI::Controller::updateRoundedRect()
+{
+	using namespace SimpleApplication;
+
+	auto centerX = m_widget->textLineEdit1().toFloat();
+	auto centerY = m_widget->textLineEdit2().toFloat();
+	auto w = m_widget->textLineEdit3().toFloat();
+	auto h = m_widget->textLineEdit4().toFloat();
+	auto r = m_widget->textLineEdit5().toFloat();
+
+	m_figure = std::make_shared<RoundedRect>(Point2d(centerX, centerY), w, h, r);
+}
+
+void GUI::Controller::updateTrapeze()
+{
+	using namespace SimpleApplication;
+
+	auto A_x = m_widget->textLineEdit1().toFloat();
+	auto A_y = m_widget->textLineEdit2().toFloat();
+	auto B_x = m_widget->textLineEdit3().toFloat();
+	auto B_y = m_widget->textLineEdit4().toFloat();
+	auto C_x = m_widget->textLineEdit5().toFloat();
+	auto C_y = m_widget->textLineEdit6().toFloat();
+	auto D_x = m_widget->textLineEdit7().toFloat();
+	auto D_y = m_widget->textLineEdit8().toFloat();
+
+	m_figure = std::make_shared<Trapeze>(Point2d(A_x, A_y), Point2d(B_x, B_y), Point2d(C_x, C_y), Point2d(D_x, D_y));
+}
 void Controller::updateTriangle()
 {
 	using namespace SimpleApplication;
