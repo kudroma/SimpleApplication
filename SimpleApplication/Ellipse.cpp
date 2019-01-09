@@ -31,9 +31,9 @@ Ellipse::Ellipse(const Point2d & center, float a, float b)
 	m_name = "Ellipse";
 	int indexI = 0;
 
-    const auto angle = M_PI / 20;
+    //const auto angle = M_PI / 20;
 
-	while (angle * indexI < M_PI * 2)
+	while (m_angle * indexI < M_PI * 2)
 	{
 		auto point = pointInArc(m_angle, indexI);
 		m_points.push_back(point);
@@ -64,7 +64,7 @@ BoundingRect Ellipse::boundingBox() const
 	return bRect;
 }
 
-Point2d Ellipse::pointInArc(float t, int indexPoint) const // t - angle in degrees 
+Point2d Ellipse::pointInArc(float t, int indexPoint) const // t - angle in radians
 {
 	Point2d pointVar;
 	pointVar.setX(m_center.x() + m_a * cos(M_PI / 2 - indexPoint * t));

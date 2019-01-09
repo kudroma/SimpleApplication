@@ -3,6 +3,9 @@
 #include "AbstractFigure.h"
 #include "Point2d.h"
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 namespace SimpleApplication
 {
 	//! The class represents an circle.
@@ -53,7 +56,7 @@ namespace SimpleApplication
 		float m_radius = 1.0f;
 
 		//! The angle a[i] and a[i+1]
-		float m_angle = 10.0f;
+		float m_angle = M_PI/10.0f;
 
 		//!  Center  of the circle.
 		Point2d m_center;

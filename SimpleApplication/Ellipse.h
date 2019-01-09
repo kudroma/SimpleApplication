@@ -3,6 +3,9 @@
 #include "AbstractFigure.h"
 #include "Point2d.h"
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 
 namespace SimpleApplication
 {
@@ -61,7 +64,7 @@ namespace SimpleApplication
 		float m_b = 1.0f;
 
 		//! The angle of the ellipse. Angle in degree
-		float m_angle = 10.0f;
+		float m_angle = 10.0f * M_PI / 180;
 		
 		// Coordinats point a[i]
 		Point2d pointInArc(float anglePointAi, int indexAi) const;

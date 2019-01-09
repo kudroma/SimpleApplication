@@ -16,7 +16,7 @@ Circle::Circle()
 	m_name = "Circle";
 	int indexI = 0;
 
-	while (m_angle * indexI < 360)
+	while (m_angle * indexI <= 360)
 	{
 		auto point = coordinatesPointAtAngle(m_angle, indexI);
 		m_points.push_back(point);
@@ -30,7 +30,7 @@ Circle::Circle(Point2d circleCenter, float radius)
 	m_name = "Circle";
 	int indexI = 0;
 
-	while (m_angle*indexI < 360)
+	while (m_angle*indexI <= 2*M_PI)
 	{
 		auto point = coordinatesPointAtAngle(m_angle, indexI);
 		m_points.push_back(point);
@@ -64,8 +64,8 @@ BoundingRect Circle::boundingBox() const
 
 Point2d Circle::coordinatesPointAtAngle(float anglePointA, int indexAi) const
 {
-	auto x = m_center.x() + m_radius * sin(indexAi*anglePointA);
-	auto y = m_center.y() + m_radius * cos(indexAi*anglePointA);
+	auto x = m_center.x() + m_radius * sin(indexAi*anglePointA*M_PI/180);
+	auto y = m_center.y() + m_radius * cos(indexAi*anglePointA*M_PI / 180);
 	Point2d pointTemp;
 	pointTemp.setX(x);
 	pointTemp.setY(y);
