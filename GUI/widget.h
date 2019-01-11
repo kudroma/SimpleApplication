@@ -146,9 +146,6 @@ public:
 	//! Renders QPainterPath.
 	void render(const QPainterPath& path);
 
-	//! Sets text to updateFigure.
-	void updateFigure();
-
 public slots:
 
 	//! Sets color of the figure.
@@ -199,6 +196,9 @@ public slots:
 signals:
 	//! Select the shape element.
 	void comboBoxItemSelected(const QString& text);
+
+	//! Updates figure.
+	void updateFigure();
 
 private:
 	//! Color figure.

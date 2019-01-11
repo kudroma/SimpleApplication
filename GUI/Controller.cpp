@@ -20,6 +20,8 @@ Controller::Controller() : QObject()
     m_widget->show();
 
 	Widget::connect(m_widget.get(), &Widget::comboBoxItemSelected, this, &Controller::createFigure);
+
+	Widget::connect(m_widget.get(), &Widget::updateFigure, this, &Controller::updateFigure);
 }
 
 Controller::~Controller()
@@ -39,10 +41,6 @@ bool Controller::pointInsideFigure()
 }
 
 void Controller::showFigure()
-{
-}
-
-void Controller::updateFigure()
 {
 }
 
@@ -89,6 +87,23 @@ void Controller::loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> f
 	if (figure->name() == "RoundedRect") Controller::loadRoundedRect(*std::static_pointer_cast<SimpleApplication::RoundedRect>(figure));
 	
 	if (figure->name() == "Trapeze") Controller::loadTrapeze(*std::static_pointer_cast<SimpleApplication::Trapeze>(figure));
+}
+
+void Controller::updateFigure()
+{
+	if (m_figure->name() == "Circle") Controller::updateCircle();
+
+	if (m_figure->name() == "Ellipse") Controller::updateEllipse();
+
+	if (m_figure->name() == "Rectangle") Controller::updateRectangle();
+
+	if (m_figure->name() == "Triangle") Controller::updateTriangle();
+
+	if (m_figure->name() == "RoundedRect") Controller::updateRoundedRect();
+
+	if (m_figure->name() == "Trapeze") Controller::updateTrapeze();
+
+	Controller::loadFigure(m_figure);
 }
 
 void GUI::Controller::loadCircle(const SimpleApplication::Circle & circle)

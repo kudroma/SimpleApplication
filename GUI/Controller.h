@@ -53,15 +53,15 @@ namespace GUI
 		//! Shows figure.
 		void showFigure();
 
-		//! Updates figure.
-		void updateFigure();
-
 	private slots:
 		//! Loads figure.
 		void loadFigure(std::shared_ptr<SimpleApplication::AbstractFigure> figure);
 
 		//! Creates figure.
 		void createFigure(const QString& text);
+
+		//! Updates figure.
+		void updateFigure();
 
 	private:
 		//! Loads the circle into the user interface.
