@@ -200,7 +200,9 @@ void Widget::render(const QPainterPath& path)
 	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
 		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2); 
 	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
-		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2, Qt::AspectRatioMode::KeepAspectRatio);
+		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2, Qt::AspectRatioMode::KeepAspectRatio);	
+
+
 }
 
 QString Widget::textLineEdit6() const

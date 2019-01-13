@@ -8,7 +8,7 @@ using namespace SimpleApplication;
 RoundedRect::RoundedRect()
 {
 	m_center = Point2d(15, 20);
-	m_width = 10;
+	m_width = 20;
 	m_height = 10;
 	m_radius = 1;
 
@@ -43,7 +43,7 @@ RoundedRect::RoundedRect()
 
 	// Coordinates point 3ts
 	x = m_center.x() - m_width / 2;
-	y = m_center.y() + m_width / 2 - m_radius;
+	y = m_center.y() + m_height / 2 - m_radius;
 	pointTemp.setX(x);
 	pointTemp.setY(y);
 	m_points.push_back(pointTemp);
@@ -64,7 +64,7 @@ RoundedRect::RoundedRect()
 
 	// Coordinates point 6ts
 	x = m_center.x() + m_width / 2;
-	y = m_center.y() + m_width / 2 - m_radius;
+	y = m_center.y() + m_height / 2 - m_radius;
 	pointTemp.setX(x);
 	pointTemp.setY(y);
 	m_points.push_back(pointTemp);
