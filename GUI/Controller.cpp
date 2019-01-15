@@ -104,6 +104,7 @@ void Controller::updateFigure()
 	if (m_figure->name() == "Trapeze") Controller::updateTrapeze();
 
 	Controller::loadFigure(m_figure);
+	Controller::drawFigure();
 }
 
 void GUI::Controller::loadCircle(const SimpleApplication::Circle & circle)
