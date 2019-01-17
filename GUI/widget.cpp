@@ -197,8 +197,8 @@ void Widget::render(const QPainterPath& path)
 	brush.setStyle(Qt::BrushStyle::SolidPattern);
 	auto item = static_cast<QGraphicsItem*>(scene->addPath(path, pen, brush));
 	ui->graphicsView->setScene(scene);
-	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
-		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2); 
+//	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
+//		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2); 
 	ui->graphicsView->fitInView(scene->sceneRect().left() * 2, scene->sceneRect().top() * 2,
 		scene->sceneRect().width() * 2, scene->sceneRect().height() * 2, Qt::AspectRatioMode::KeepAspectRatio);	
 

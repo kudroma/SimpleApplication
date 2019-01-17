@@ -108,7 +108,7 @@ RoundedRect::RoundedRect(const Point2d& center, float w, float h, float r)
 
 	// Coordinates point 3ts
 	x = m_center.x() - m_width / 2;
-	y = m_center.y() + m_width / 2 - m_radius;
+	y = m_center.y() + m_height / 2 - m_radius;
 	pointTemp.setX(x);
 	pointTemp.setY(y);
 	m_points.push_back(pointTemp);
@@ -129,7 +129,7 @@ RoundedRect::RoundedRect(const Point2d& center, float w, float h, float r)
 
 	// Coordinates point 6ts
 	x = m_center.x() + m_width / 2;
-	y = m_center.y() + m_width / 2 - m_radius;
+	y = m_center.y() + m_height / 2 - m_radius;
 	pointTemp.setX(x);
 	pointTemp.setY(y);
 	m_points.push_back(pointTemp);
