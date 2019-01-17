@@ -4,7 +4,7 @@ using namespace SimpleApplication;
 
 Rectangle::Rectangle()
 {
-	m_center = Point2d(20, 18);
+	m_center = Point2d(15, 20);
 	m_width = 10;
 	m_height = 3;
 
